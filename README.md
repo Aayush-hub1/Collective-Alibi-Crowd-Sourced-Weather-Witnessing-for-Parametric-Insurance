@@ -1,0 +1,1 @@
+# Collective-Alibi-Crowd-Sourced-Weather-Witnessing-for-Parametric-Insurance
