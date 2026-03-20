@@ -199,7 +199,8 @@ Our team sees three clear phases beyond the hackathon:
 
 ---
 
-**#leaf** · DEVTrails 2026
+— Aayush Kumar, Adarsh Raj & Sachin Kumar  
+**Team Leaf** · DEVTrails 2026
 
 ---
 
