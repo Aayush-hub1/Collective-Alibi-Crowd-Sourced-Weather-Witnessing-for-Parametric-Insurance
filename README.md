@@ -425,6 +425,10 @@ season deserves better than bearing that loss alone.
 
 We built this for him.
 
+Collective Alibi is your project name that we came up with together. Here's what it means:
+Collective — the system queries a crowd of nearby workers together, not just one person in isolation.
+Alibi — those nearby workers act as each other's alibi. Their phones passively confirm "yes, there really is a storm here" — or expose the fraud ring by their collective silence.
+
 ---
 
 **#leaf** · Guidewire DEVTrails 2026
