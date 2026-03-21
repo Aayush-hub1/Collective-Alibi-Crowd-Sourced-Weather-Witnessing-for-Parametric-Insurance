@@ -1,3 +1,7 @@
+<img width="1458" height="817" alt="Screenshot 2026-03-21 at 5 32 35 PM" src="https://github.com/user-attachments/assets/023e3942-c212-45fa-9a2d-352b889da841" />
+<img width="1469" height="837" alt="Screenshot 2026-03-21 at 5 32 20 PM" src="https://github.com/user-attachments/assets/bcf53041-75ef-40b2-a3e8-18bbbfc2215b" />
+<img width="1468" height="769" alt="Screenshot 2026-03-21 at 5 32 05 PM" src="https://github.com/user-attachments/assets/b4c5b99a-6ea7-463c-ab34-14143d4d0033" />
+<img width="1466" height="832" alt="Screenshot 2026-03-21 at 5 31 46 PM" src="https://github.com/user-attachments/assets/f0c6c42e-f76a-4da4-96f3-85d0f47ca7c7" />
 # 🛡️ Collective Alibi
 ### Parametric Income Insurance for India's Gig Delivery Workers
 ### *Because when it rains, someone should have their back.*
