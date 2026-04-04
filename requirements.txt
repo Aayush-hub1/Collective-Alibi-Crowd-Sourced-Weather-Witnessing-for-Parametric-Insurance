@@ -1,0 +1,9 @@
+fastapi==0.110.0
+uvicorn[standard]==0.29.0
+redis==5.0.3
+pydantic==2.6.4
+requests==2.31.0
+xgboost==2.0.3
+scikit-learn==1.4.1
+pandas==2.2.1
+faker==24.3.0
