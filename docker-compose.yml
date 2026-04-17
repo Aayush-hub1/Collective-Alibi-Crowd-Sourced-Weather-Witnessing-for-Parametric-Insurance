@@ -1,17 +1,43 @@
 version: "3.9"
+
 services:
   backend:
     build: ./backend
     ports: ["8000:8000"]
-    environment: [REDIS_HOST=redis]
-    depends_on: [redis]
+    environment:
+      - REDIS_HOST=redis
+      - REDIS_PORT=6379
+      - OPENWEATHER_KEY=${OPENWEATHER_KEY:-}
+      - OPENAQ_KEY=${OPENAQ_KEY:-}
+    depends_on:
+      redis:
+        condition: service_healthy
     volumes: ["./backend:/app"]
     restart: unless-stopped
+
   redis:
     image: redis:7-alpine
     ports: ["6379:6379"]
     restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 3s
+      retries: 5
+
   frontend:
     image: nginx:alpine
     ports: ["3000:80"]
     volumes: ["./index.html:/usr/share/nginx/html/index.html"]
+    restart: unless-stopped
+
+# ── SETUP ──────────────────────────────────────────────
+# 1. Start:     docker-compose up --build
+# 2. Seed:      curl -X POST http://localhost:8000/seed/demo
+# 3. Frontend:  http://localhost:3000 (or open index.html)
+# 4. API docs:  http://localhost:8000/docs
+#
+# Optional — real weather/AQI:
+#   export OPENWEATHER_KEY=your_key  (openweathermap.org/api)
+#   export OPENAQ_KEY=your_key       (openaq.org)
+#   docker-compose up --build

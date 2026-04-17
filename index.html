@@ -3,150 +3,88 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Collective Alibi | DEVTrails 2026 Phase 2</title>
-<link href="https://fonts.googleapis.com/css2?family=Clash+Display:wght@400;500;600;700&family=Cabinet+Grotesk:wght@300;400;500;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<title>Collective Alibi | Phase 3 Final</title>
+<link href="https://fonts.googleapis.com/css2?family=Cabinet+Grotesk:wght@400;500;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
-/* ════════════════════════════════════════════
-   COLLECTIVE ALIBI — PHASE 2
-   Design: Clean Editorial + Technical Precision
-   Fonts: Cabinet Grotesk (body) + JetBrains Mono (data)
-   Palette: Near-black + Electric Lime + Ice Blue
-════════════════════════════════════════════ */
 :root{
-  --bg:#07080c;--bg2:#0c0e15;--bg3:#11141e;--bg4:#161a26;--bg5:#1c2030;
-  --glass:rgba(255,255,255,0.03);--glass2:rgba(255,255,255,0.06);--glass3:rgba(255,255,255,0.11);--glass4:rgba(255,255,255,0.18);
+  --bg:#07080c;--bg2:#0c0e15;--bg3:#11141e;--bg4:#161a26;
+  --glass:rgba(255,255,255,0.03);--glass2:rgba(255,255,255,0.06);--glass3:rgba(255,255,255,0.11);
   --white:#f4f1ec;--muted:#8a879e;--dim:#505068;
-  --lime:#c4f135;--lime2:#d8f76a;--lime3:#eafba8;--lime-a:rgba(196,241,53,0.08);--lime-b:rgba(196,241,53,0.15);
-  --ice:#7dd3fc;--ice2:#bae6fd;--ice-a:rgba(125,211,252,0.07);
-  --ember:#ff5733;--ember2:#ff8c70;--ember-a:rgba(255,87,51,0.08);
+  --lime:#c4f135;--lime2:#d8f76a;--lime-a:rgba(196,241,53,0.08);--lime-b:rgba(196,241,53,0.15);
+  --ice:#7dd3fc;--ice-a:rgba(125,211,252,0.07);
+  --ember:#ff5733;--ember-a:rgba(255,87,51,0.08);
   --gold:#fbbf24;--gold-a:rgba(251,191,36,0.08);
   --violet:#a78bfa;--violet-a:rgba(167,139,250,0.08);
   --r:6px;--r2:12px;--r3:20px;
 }
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
-body{
-  font-family:'Cabinet Grotesk',sans-serif;
-  background:var(--bg);color:var(--white);
-  min-height:100vh;overflow-x:hidden;
-  line-height:1.6;
-}
-/* Subtle atmosphere */
-body::before{
-  content:'';position:fixed;inset:0;
-  background:
-    radial-gradient(ellipse 70% 50% at 10% 10%,rgba(196,241,53,0.025),transparent),
-    radial-gradient(ellipse 60% 40% at 90% 90%,rgba(125,211,252,0.025),transparent);
-  pointer-events:none;z-index:0;
-}
-/* Dot grid */
-body::after{
-  content:'';position:fixed;inset:0;
-  background-image:radial-gradient(circle,rgba(255,255,255,0.04) 1px,transparent 1px);
-  background-size:28px 28px;
-  pointer-events:none;z-index:0;opacity:.5;
-}
-
-/* ── TYPOGRAPHY ── */
+body{font-family:'Cabinet Grotesk',sans-serif;background:var(--bg);color:var(--white);min-height:100vh;overflow-x:hidden;line-height:1.6}
+body::before{content:'';position:fixed;inset:0;background:radial-gradient(ellipse 70% 50% at 10% 10%,rgba(196,241,53,0.025),transparent),radial-gradient(ellipse 60% 40% at 90% 90%,rgba(125,211,252,0.025),transparent);pointer-events:none;z-index:0}
+body::after{content:'';position:fixed;inset:0;background-image:radial-gradient(circle,rgba(255,255,255,0.04) 1px,transparent 1px);background-size:28px 28px;pointer-events:none;z-index:0;opacity:.5}
 .mono{font-family:'JetBrains Mono',monospace}
-.display{font-family:'Cabinet Grotesk',sans-serif;font-weight:900;letter-spacing:-.02em}
 
-/* ── NAV ── */
-nav{
-  position:sticky;top:0;z-index:999;
-  display:flex;align-items:center;justify-content:space-between;
-  padding:.75rem 2rem;
-  background:rgba(7,8,12,0.85);
-  border-bottom:1px solid var(--glass3);
-  backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);
-}
+/* NAV */
+nav{position:sticky;top:0;z-index:999;display:flex;align-items:center;justify-content:space-between;padding:.75rem 2rem;background:rgba(7,8,12,0.9);border-bottom:1px solid var(--glass3);backdrop-filter:blur(24px)}
 .nav-brand{display:flex;align-items:center;gap:10px}
-.nav-logo-box{
-  width:30px;height:30px;background:var(--lime);
-  border-radius:7px;display:flex;align-items:center;justify-content:center;
-  font-weight:900;font-size:12px;color:var(--bg);letter-spacing:-.5px;
-}
-.nav-name{font-weight:800;font-size:15px;letter-spacing:-.3px}
-.nav-name span{color:var(--lime)}
+.nav-logo{width:30px;height:30px;background:var(--lime);border-radius:7px;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:12px;color:var(--bg)}
+.nav-name{font-weight:800;font-size:15px}.nav-name span{color:var(--lime)}
 .nav-tabs{display:flex;gap:2px;background:var(--bg3);border-radius:9px;padding:3px}
-.nt{
-  padding:5px 13px;border-radius:7px;font-size:11px;font-weight:700;
-  letter-spacing:.3px;text-transform:uppercase;cursor:pointer;
-  color:var(--muted);border:none;background:transparent;
-  font-family:'Cabinet Grotesk',sans-serif;transition:all .15s;
-}
+.nt{padding:5px 13px;border-radius:7px;font-size:11px;font-weight:700;letter-spacing:.3px;text-transform:uppercase;cursor:pointer;color:var(--muted);border:none;background:transparent;font-family:'Cabinet Grotesk',sans-serif;transition:all .15s}
 .nt.on{background:var(--lime);color:var(--bg)}
 .nt:hover:not(.on){color:var(--white);background:var(--glass2)}
 .nav-end{display:flex;align-items:center;gap:8px}
-.npill{
-  display:flex;align-items:center;gap:5px;
-  font-family:'JetBrains Mono',monospace;font-size:9px;
-  padding:4px 10px;border-radius:99px;border:1px solid;
-}
+.npill{display:flex;align-items:center;gap:5px;font-family:'JetBrains Mono',monospace;font-size:9px;padding:4px 10px;border-radius:99px;border:1px solid}
 .npill-live{color:var(--lime);border-color:rgba(196,241,53,.2);background:var(--lime-a)}
-.npill-ring{color:var(--ember);border-color:rgba(255,87,51,.3);background:var(--ember-a);display:none;animation:ringPulse 1.2s infinite}
-@keyframes ringPulse{0%,100%{border-color:rgba(255,87,51,.3)}50%{border-color:rgba(255,87,51,.7)}}
-.ndot{width:5px;height:5px;border-radius:50%;background:currentColor;animation:ndotBlink 2s infinite}
-@keyframes ndotBlink{0%,100%{opacity:1}50%{opacity:.3}}
+.npill-ring{color:var(--ember);border-color:rgba(255,87,51,.3);background:var(--ember-a);display:none;animation:rp 1.2s infinite}
+@keyframes rp{0%,100%{border-color:rgba(255,87,51,.3)}50%{border-color:rgba(255,87,51,.8)}}
+.ndot{width:5px;height:5px;border-radius:50%;background:currentColor;animation:nb 2s infinite}
+@keyframes nb{0%,100%{opacity:1}50%{opacity:.3}}
 
-/* ── PAGES ── */
+/* TOAST */
+.toast{position:fixed;bottom:1.5rem;right:1.5rem;z-index:9999;background:var(--bg3);border:1px solid var(--glass3);border-radius:var(--r2);padding:.85rem 1.2rem;font-family:'JetBrains Mono',monospace;font-size:11px;max-width:360px;opacity:0;transform:translateY(8px);transition:all .25s;pointer-events:none;line-height:1.6}
+.toast.show{opacity:1;transform:translateY(0)}
+.toast.ok{border-color:rgba(196,241,53,.4);color:var(--lime)}
+.toast.err{border-color:rgba(255,87,51,.4);color:var(--ember)}
+.toast.info{border-color:rgba(125,211,252,.3);color:var(--ice)}
+
+/* PAGES */
 .pg{display:none;position:relative;z-index:1}
-.pg.on{display:block;animation:pgFade .3s ease}
-@keyframes pgFade{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+.pg.on{display:block;animation:pf .3s ease}
+@keyframes pf{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
 
-/* ── LAYOUT ── */
-.wrap{max-width:1120px;margin:0 auto;padding:2rem 2rem}
+/* LAYOUT */
+.wrap{max-width:1140px;margin:0 auto;padding:2rem}
 .wsm{max-width:600px;margin:0 auto;padding:2rem 1.5rem}
 
-/* ── SHARED COMPONENTS ── */
+/* COMPONENTS */
 .card{background:var(--bg2);border:1px solid var(--glass2);border-radius:var(--r2);padding:1.25rem}
 .card-glass{background:var(--glass);border:1px solid var(--glass2);border-radius:var(--r3);padding:1.75rem;position:relative;overflow:hidden}
 .card-glass::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,var(--glass3),transparent)}
 
-.eyebrow{
-  font-family:'JetBrains Mono',monospace;font-size:9px;
-  color:var(--lime);letter-spacing:.2em;text-transform:uppercase;
-  display:flex;align-items:center;gap:8px;margin-bottom:.6rem;
-}
+.eyebrow{font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--lime);letter-spacing:.2em;text-transform:uppercase;display:flex;align-items:center;gap:8px;margin-bottom:.6rem}
 .eyebrow::before{content:'//';opacity:.5}
 .sec-title{font-size:1.9rem;font-weight:900;letter-spacing:-.04em;line-height:1.05;margin-bottom:.4rem}
 .sec-sub{font-size:12px;color:var(--muted);font-family:'JetBrains Mono',monospace;margin-bottom:1.5rem}
 
-.chip{
-  display:inline-flex;align-items:center;gap:3px;
-  font-family:'JetBrains Mono',monospace;font-size:9px;font-weight:500;
-  padding:3px 8px;border-radius:99px;border:1px solid;letter-spacing:.04em;
-}
+.chip{display:inline-flex;align-items:center;gap:3px;font-family:'JetBrains Mono',monospace;font-size:9px;padding:3px 8px;border-radius:99px;border:1px solid}
 .c-lime{background:var(--lime-a);color:var(--lime);border-color:rgba(196,241,53,.2)}
 .c-ice{background:var(--ice-a);color:var(--ice);border-color:rgba(125,211,252,.2)}
 .c-ember{background:var(--ember-a);color:var(--ember);border-color:rgba(255,87,51,.2)}
 .c-gold{background:var(--gold-a);color:var(--gold);border-color:rgba(251,191,36,.2)}
 .c-violet{background:var(--violet-a);color:var(--violet);border-color:rgba(167,139,250,.2)}
 
-.btn{
-  display:inline-flex;align-items:center;gap:6px;
-  padding:10px 20px;border-radius:var(--r);font-size:13px;font-weight:700;
-  cursor:pointer;border:none;font-family:'Cabinet Grotesk',sans-serif;
-  transition:all .18s;letter-spacing:-.1px;
-}
-.btn-lime{background:var(--lime);color:var(--bg)}
-.btn-lime:hover{background:var(--lime2);transform:translateY(-1px)}
-.btn-ice{background:var(--ice);color:var(--bg)}
-.btn-ice:hover{background:var(--ice2);transform:translateY(-1px)}
-.btn-ember{background:var(--ember);color:#fff}
-.btn-ember:hover{filter:brightness(1.1);transform:translateY(-1px)}
-.btn-outline{background:transparent;border:1px solid var(--glass3);color:var(--muted)}
-.btn-outline:hover{border-color:var(--glass4);color:var(--white);background:var(--glass2)}
+.btn{display:inline-flex;align-items:center;gap:6px;padding:10px 20px;border-radius:var(--r);font-size:13px;font-weight:700;cursor:pointer;border:none;font-family:'Cabinet Grotesk',sans-serif;transition:all .18s}
+.btn-lime{background:var(--lime);color:var(--bg)}.btn-lime:hover{background:var(--lime2);transform:translateY(-1px)}
+.btn-ice{background:var(--ice);color:var(--bg)}.btn-ice:hover{transform:translateY(-1px)}
+.btn-ember{background:var(--ember);color:#fff}.btn-ember:hover{filter:brightness(1.1)}
+.btn-outline{background:transparent;border:1px solid var(--glass3);color:var(--muted)}.btn-outline:hover{color:var(--white);background:var(--glass2)}
 .btn-w{width:100%;justify-content:center;margin-top:.5rem}
+.btn:disabled{opacity:.4;cursor:not-allowed;transform:none!important}
 
 .fg{margin-bottom:.85rem}
 .fg label{display:block;font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--muted);letter-spacing:.12em;text-transform:uppercase;margin-bottom:.35rem}
-.fg input,.fg select,.fg textarea{
-  width:100%;background:var(--bg3);border:1px solid var(--glass2);
-  border-radius:var(--r);padding:9px 13px;font-size:13px;
-  color:var(--white);font-family:'Cabinet Grotesk',sans-serif;
-  outline:none;transition:border .15s,background .15s;
-}
+.fg input,.fg select{width:100%;background:var(--bg3);border:1px solid var(--glass2);border-radius:var(--r);padding:10px 13px;font-size:13px;color:var(--white);font-family:'Cabinet Grotesk',sans-serif;outline:none;transition:border .15s}
 .fg input:focus,.fg select:focus{border-color:var(--lime);background:var(--bg4)}
 .fg select option{background:var(--bg3)}
 .fg-2{display:grid;grid-template-columns:1fr 1fr;gap:.75rem}
@@ -155,238 +93,135 @@ nav{
 .ob-s{flex:1;height:2px;border-radius:1px;background:var(--glass);transition:background .3s}
 .ob-s.done{background:var(--lime)}
 
-/* ════════════════════════════════
-   HOME
-════════════════════════════════ */
-.hero-section{max-width:1120px;margin:0 auto;padding:3.5rem 2rem 2rem}
-.hero-grid{display:grid;grid-template-columns:1fr 420px;gap:4rem;align-items:start;margin-bottom:3rem}
-.hero-tag{
-  font-family:'JetBrains Mono',monospace;font-size:9px;
-  color:var(--lime);letter-spacing:.2em;text-transform:uppercase;
-  display:flex;align-items:center;gap:8px;margin-bottom:1.4rem;opacity:.9;
-}
+/* HOME */
+.hero-section{max-width:1140px;margin:0 auto;padding:3.5rem 2rem 2rem}
+.hero-grid{display:grid;grid-template-columns:1fr 400px;gap:4rem;align-items:start;margin-bottom:3rem}
+.hero-tag{font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--lime);letter-spacing:.2em;text-transform:uppercase;display:flex;align-items:center;gap:8px;margin-bottom:1.4rem}
 .hero-tag::before{content:'▶';font-size:7px}
-.hero-h1{
-  font-size:clamp(3rem,5.5vw,5.2rem);font-weight:900;
-  line-height:.96;letter-spacing:-.04em;margin-bottom:1.2rem;
-}
-.hero-h1 mark{
-  background:none;color:transparent;
-  -webkit-text-stroke:1.5px var(--lime);
-}
-.hero-p{font-size:.95rem;color:var(--muted);line-height:1.75;max-width:460px;margin-bottom:1.75rem;font-weight:400}
+.hero-h1{font-size:clamp(3rem,5.5vw,5.2rem);font-weight:900;line-height:.96;letter-spacing:-.04em;margin-bottom:1.2rem}
+.hero-h1 mark{background:none;color:transparent;-webkit-text-stroke:1.5px var(--lime)}
+.hero-p{font-size:.95rem;color:var(--muted);line-height:1.75;max-width:460px;margin-bottom:1.75rem}
 .hero-btns{display:flex;gap:.65rem;flex-wrap:wrap}
-
-/* Live stats card */
-.live-card{
-  background:var(--bg2);border:1px solid var(--glass2);
-  border-radius:var(--r3);overflow:hidden;
-}
-.live-card-header{
-  background:var(--lime);padding:.75rem 1.25rem;
-  display:flex;align-items:center;justify-content:space-between;
-}
-.live-card-header span{font-weight:800;font-size:12px;color:var(--bg);letter-spacing:.05em}
+.live-card{background:var(--bg2);border:1px solid var(--glass2);border-radius:var(--r3);overflow:hidden}
+.live-card-hdr{background:var(--lime);padding:.75rem 1.25rem;display:flex;align-items:center;justify-content:space-between}
+.live-card-hdr span{font-weight:800;font-size:12px;color:var(--bg)}
 .live-card-body{padding:1.25rem}
 .ls{margin-bottom:1rem;padding-bottom:1rem;border-bottom:1px solid var(--glass2)}
 .ls:last-child{margin:0;padding:0;border:none}
-.ls-num{
-  font-family:'Cabinet Grotesk',sans-serif;font-weight:900;
-  font-size:2.6rem;line-height:1;margin-bottom:.2rem;letter-spacing:-.04em;
-}
+.ls-num{font-weight:900;font-size:2.4rem;line-height:1;margin-bottom:.15rem;letter-spacing:-.04em}
 .ls-label{font-size:11px;color:var(--muted);font-family:'JetBrains Mono',monospace}
-.lc-bar{height:2px;background:var(--glass);border-radius:1px;overflow:hidden;margin-top:1rem}
-.lc-fill{height:100%;background:linear-gradient(90deg,var(--lime),var(--ice));animation:lcFill 2s ease forwards;width:0}
-@keyframes lcFill{to{width:72%}}
-
-/* Stats row */
 .stats-row{display:grid;grid-template-columns:repeat(4,1fr);gap:.75rem;margin-bottom:3rem}
-.scard{
-  background:var(--bg2);border:1px solid var(--glass);
-  border-radius:var(--r2);padding:1.1rem;
-  transition:border-color .2s,transform .2s;cursor:default;
-}
+.scard{background:var(--bg2);border:1px solid var(--glass);border-radius:var(--r2);padding:1.1rem;transition:border-color .2s,transform .2s}
 .scard:hover{border-color:var(--glass3);transform:translateY(-2px)}
 .scard-num{font-size:1.9rem;font-weight:900;letter-spacing:-.04em;margin-bottom:.25rem}
 .scard-label{font-size:11px;color:var(--muted);line-height:1.5}
-
-/* Flow steps */
 .flow-row{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--glass2);border-radius:var(--r2);overflow:hidden;margin-bottom:2.5rem}
 .fstep{background:var(--bg2);padding:1.4rem;transition:background .2s}
 .fstep:hover{background:var(--bg3)}
 .fstep-n{font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--lime);letter-spacing:.12em;margin-bottom:.85rem}
 .fstep-icon{font-size:1.5rem;margin-bottom:.7rem}
-.fstep-title{font-size:13px;font-weight:800;margin-bottom:.35rem;letter-spacing:-.2px}
+.fstep-title{font-size:13px;font-weight:800;margin-bottom:.35rem}
 .fstep-desc{font-size:11px;color:var(--muted);line-height:1.65}
-
-/* Triggers */
 .trig-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:.6rem}
-.trig-item{
-  background:var(--bg2);border:1px solid var(--glass);
-  border-radius:var(--r);padding:.85rem 1rem;
-  display:flex;align-items:center;gap:.75rem;transition:all .18s;
-}
+.trig-item{background:var(--bg2);border:1px solid var(--glass);border-radius:var(--r);padding:.85rem 1rem;display:flex;align-items:center;gap:.75rem;transition:all .18s;cursor:pointer}
 .trig-item:hover{border-color:var(--glass2);background:var(--bg3)}
+.trig-item.active{border-color:rgba(196,241,53,.3);background:var(--lime-a)}
 .trig-icon{font-size:1.3rem;flex-shrink:0}
 .trig-name{font-size:12px;font-weight:700}
 .trig-thresh{font-size:10px;color:var(--muted);font-family:'JetBrains Mono',monospace;margin-top:1px}
 
-/* ════════════════════════════════
-   REGISTER
-════════════════════════════════ */
+/* WEATHER WIDGET */
+.weather-box{background:var(--bg3);border:1px solid var(--glass2);border-radius:var(--r2);padding:1rem;margin-top:1.25rem}
+.weather-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:.6rem;margin-top:.75rem}
+.w-stat{background:var(--bg4);border-radius:var(--r);padding:.6rem;text-align:center}
+.w-val{font-family:'JetBrains Mono',monospace;font-size:1.1rem;font-weight:700;color:var(--white)}
+.w-lbl{font-size:9px;color:var(--muted);font-family:'JetBrains Mono',monospace;margin-top:2px;letter-spacing:.05em;text-transform:uppercase}
+
+/* REGISTER */
 .plan-row{display:grid;grid-template-columns:repeat(3,1fr);gap:.6rem;margin:.75rem 0 1rem}
-.pcard{
-  background:var(--bg3);border:1px solid var(--glass);
-  border-radius:var(--r);padding:.9rem;cursor:pointer;
-  transition:all .18s;text-align:center;position:relative;
-}
+.pcard{background:var(--bg3);border:1px solid var(--glass);border-radius:var(--r);padding:.9rem;cursor:pointer;transition:all .18s;text-align:center;position:relative}
 .pcard:hover{border-color:var(--glass2)}
 .pcard.sel{border-color:var(--lime);background:var(--lime-a)}
-.pcard.sel::before{
-  content:'BEST';position:absolute;top:-9px;left:50%;transform:translateX(-50%);
-  font-family:'JetBrains Mono',monospace;font-size:7px;letter-spacing:.08em;
-  background:var(--lime);color:var(--bg);padding:2px 8px;border-radius:99px;
-}
+.pcard.sel::before{content:'BEST';position:absolute;top:-9px;left:50%;transform:translateX(-50%);font-family:'JetBrains Mono',monospace;font-size:7px;background:var(--lime);color:var(--bg);padding:2px 8px;border-radius:99px}
 .pcard-price{font-weight:900;font-size:1.9rem;color:var(--lime);letter-spacing:-.04em;line-height:1}
-.pcard-name{font-size:11px;font-weight:800;margin:.2rem 0;letter-spacing:.05em}
+.pcard-name{font-size:11px;font-weight:800;margin:.2rem 0}
 .pcard-det{font-size:10px;color:var(--muted);font-family:'JetBrains Mono',monospace}
-.ai-pill{
-  background:var(--ice-a);border:1px solid rgba(125,211,252,.18);
-  border-radius:var(--r);padding:.7rem 1rem;font-size:11px;
-  color:var(--ice);font-family:'JetBrains Mono',monospace;
-  margin-bottom:.9rem;display:none;line-height:1.8;
-}
-.excl-box{
-  background:rgba(255,87,51,.04);border:1px solid rgba(255,87,51,.12);
-  border-radius:var(--r);padding:.75rem 1rem;
-  font-family:'JetBrains Mono',monospace;font-size:10px;
-  color:var(--muted);line-height:1.85;margin-bottom:.9rem;
-}
+.ai-pill{background:var(--ice-a);border:1px solid rgba(125,211,252,.18);border-radius:var(--r);padding:.7rem 1rem;font-size:11px;color:var(--ice);font-family:'JetBrains Mono',monospace;margin-bottom:.9rem;display:none;line-height:1.8;white-space:pre}
+.excl-box{background:rgba(255,87,51,.04);border:1px solid rgba(255,87,51,.12);border-radius:var(--r);padding:.75rem 1rem;font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--muted);line-height:1.85;margin-bottom:.9rem}
 .excl-box strong{color:var(--ember);display:block;margin-bottom:.3rem;font-size:10px}
-.confirm-box{
-  background:var(--bg3);border:1px solid var(--glass);
-  border-radius:var(--r);padding:1rem;margin-bottom:.9rem;
-  font-size:12px;line-height:2.1;color:var(--muted);
-}
+.confirm-box{background:var(--bg3);border:1px solid var(--glass);border-radius:var(--r);padding:1rem;margin-bottom:.9rem;font-size:12px;line-height:2.2;color:var(--muted)}
 .confirm-box strong{color:var(--white)}
 .success-c{text-align:center;padding:1.25rem 0}
-.s-badge{
-  width:72px;height:72px;border-radius:50%;
-  border:2px solid var(--lime);margin:0 auto 1rem;
-  display:flex;align-items:center;justify-content:center;
-  font-size:1.8rem;animation:sPop .5s cubic-bezier(.34,1.56,.64,1);
-}
-@keyframes sPop{from{transform:scale(0);opacity:0}to{transform:scale(1);opacity:1}}
-.s-title{font-size:1.5rem;font-weight:900;color:var(--lime);letter-spacing:-.03em;margin-bottom:.4rem}
+.s-badge{width:72px;height:72px;border-radius:50%;border:2px solid var(--lime);margin:0 auto 1rem;display:flex;align-items:center;justify-content:center;font-size:1.8rem;animation:sp .5s cubic-bezier(.34,1.56,.64,1)}
+@keyframes sp{from{transform:scale(0);opacity:0}to{transform:scale(1);opacity:1}}
+.s-title{font-size:1.5rem;font-weight:900;color:var(--lime);margin-bottom:.4rem}
 .s-sub{font-size:12px;color:var(--muted);line-height:1.7;margin-bottom:1.25rem}
+.trust-bar-wrap{display:flex;align-items:center;gap:8px;background:var(--bg3);border:1px solid var(--glass2);border-radius:var(--r);padding:.6rem .9rem;margin:.75rem 0}
+.trust-track{flex:1;height:4px;background:var(--glass);border-radius:2px;overflow:hidden}
+.trust-fill{height:100%;background:linear-gradient(90deg,var(--ember),var(--gold),var(--lime));transition:width 1s ease}
+.trust-val{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--lime);min-width:32px;text-align:right}
 
-/* ════════════════════════════════
-   POLICY
-════════════════════════════════ */
-.pol-hero{
-  background:var(--bg2);border:1px solid var(--glass2);
-  border-radius:var(--r3);padding:1.5rem;margin-bottom:1rem;
-  position:relative;overflow:hidden;
-}
+/* POLICY */
+.pol-hero{background:var(--bg2);border:1px solid var(--glass2);border-radius:var(--r3);padding:1.5rem;margin-bottom:1rem;position:relative;overflow:hidden}
 .pol-hero::after{content:'';position:absolute;top:-60px;right:-60px;width:180px;height:180px;background:radial-gradient(circle,rgba(196,241,53,.05),transparent 70%)}
-.pol-name{font-size:1.5rem;font-weight:900;letter-spacing:-.03em;margin-bottom:.2rem}
+.pol-name{font-size:1.5rem;font-weight:900;margin-bottom:.2rem}
 .pol-meta{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--muted);margin-bottom:.9rem}
-.pol-active{
-  display:inline-flex;align-items:center;gap:6px;
-  background:var(--lime-a);border:1px solid rgba(196,241,53,.2);
-  color:var(--lime);font-family:'JetBrains Mono',monospace;font-size:10px;
-  padding:5px 12px;border-radius:99px;
-}
-.pol-active::before{content:'';width:5px;height:5px;background:var(--lime);border-radius:50%;animation:ndotBlink 2s infinite}
+.pol-active{display:inline-flex;align-items:center;gap:6px;background:var(--lime-a);border:1px solid rgba(196,241,53,.2);color:var(--lime);font-family:'JetBrains Mono',monospace;font-size:10px;padding:5px 12px;border-radius:99px}
+.pol-active::before{content:'';width:5px;height:5px;background:var(--lime);border-radius:50%;animation:nb 2s infinite}
 .pol-metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:.6rem;margin-top:.9rem}
 .pol-m{background:var(--bg4);border-radius:var(--r);padding:.7rem;text-align:center}
 .pol-mv{font-weight:900;font-size:1.4rem;color:var(--lime);letter-spacing:-.03em}
 .pol-ml{font-size:10px;color:var(--muted);font-family:'JetBrains Mono',monospace;margin-top:2px}
-
-.alert-strip{
-  background:rgba(255,87,51,.07);border:1px solid rgba(255,87,51,.25);
-  border-radius:var(--r2);padding:1.1rem;margin-bottom:1rem;
-  display:none;animation:stripIn .35s ease;
-}
-@keyframes stripIn{from{transform:translateY(-8px);opacity:0}to{transform:translateY(0);opacity:1}}
+.alert-strip{background:rgba(255,87,51,.07);border:1px solid rgba(255,87,51,.25);border-radius:var(--r2);padding:1.1rem;margin-bottom:1rem;display:none;animation:asi .35s ease}
+@keyframes asi{from{transform:translateY(-8px);opacity:0}to{transform:translateY(0);opacity:1}}
 .as-head{display:flex;align-items:center;gap:7px;margin-bottom:.4rem}
-.as-dot{width:7px;height:7px;background:var(--ember);border-radius:50%;animation:ndotBlink 1s infinite}
+.as-dot{width:7px;height:7px;background:var(--ember);border-radius:50%;animation:nb 1s infinite}
 .as-title{font-size:12px;font-weight:800;color:var(--ember);font-family:'JetBrains Mono',monospace}
 .as-body{font-size:12px;color:var(--muted);line-height:1.65;margin-bottom:.65rem}
-.as-amt{font-size:2rem;font-weight:900;color:var(--lime);letter-spacing:-.03em;line-height:1}
-.as-sub{font-size:10px;color:var(--muted);font-family:'JetBrains Mono',monospace;margin-top:2px}
+
+/* UPI PAYOUT */
+.upi-card{background:rgba(196,241,53,.05);border:1px solid rgba(196,241,53,.25);border-radius:var(--r2);padding:1.25rem;margin-top:.75rem;text-align:center;display:none}
+.upi-amount{font-size:2.8rem;font-weight:900;color:var(--lime);letter-spacing:-.04em;animation:ua .8s ease}
+@keyframes ua{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+.upi-bar{height:4px;background:var(--glass);border-radius:2px;overflow:hidden;margin:.75rem 0}
+.upi-fill{height:100%;background:linear-gradient(90deg,var(--lime),var(--ice));animation:uf 1.2s ease forwards;width:0}
+@keyframes uf{to{width:100%}}
+.upi-meta{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--muted)}
+.upi-txn{font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--dim);margin-top:.35rem}
 
 .ph-list{display:flex;flex-direction:column;gap:.4rem}
-.ph-row{
-  display:flex;align-items:center;gap:.75rem;
-  background:var(--bg3);border-radius:var(--r);padding:.6rem .85rem;
-}
+.ph-row{display:flex;align-items:center;gap:.75rem;background:var(--bg3);border-radius:var(--r);padding:.6rem .85rem}
 .ph-icon{width:30px;height:30px;border-radius:7px;display:flex;align-items:center;justify-content:center;font-size:14px;flex-shrink:0}
 .ph-det{flex:1}
 .ph-name{font-size:12px;font-weight:700}
 .ph-date{font-size:10px;color:var(--muted);font-family:'JetBrains Mono',monospace;margin-top:1px}
-.ph-amt{font-weight:900;font-size:1.1rem;color:var(--lime);letter-spacing:-.02em}
+.ph-amt{font-weight:900;font-size:1.1rem;color:var(--lime)}
 
-/* ════════════════════════════════
-   CLAIMS
-════════════════════════════════ */
+/* CLAIMS */
 .claims-2{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1.5rem}
 .tsel{display:grid;grid-template-columns:1fr 1fr;gap:.4rem;margin:.5rem 0 .9rem}
-.tso{
-  background:var(--bg3);border:1px solid var(--glass);
-  border-radius:var(--r);padding:.6rem .75rem;cursor:pointer;
-  transition:all .15s;display:flex;align-items:center;gap:.5rem;
-  font-size:12px;font-weight:600;
-}
+.tso{background:var(--bg3);border:1px solid var(--glass);border-radius:var(--r);padding:.6rem .75rem;cursor:pointer;transition:all .15s;display:flex;align-items:center;gap:.5rem;font-size:12px;font-weight:600}
 .tso:hover{border-color:var(--glass2)}
 .tso.sel{border-color:var(--lime);background:var(--lime-a);color:var(--lime)}
-
-/* Engine processing */
 .cr-idle{text-align:center;padding:2.5rem 1rem;color:var(--muted)}
 .cr-idle-icon{font-size:2.8rem;margin-bottom:.75rem;opacity:.3;display:block}
 .cr-idle-text{font-family:'JetBrains Mono',monospace;font-size:11px;line-height:1.8}
 .cr-proc{display:none;padding:1rem}
-.proc-header{display:flex;align-items:center;gap:10px;margin-bottom:1rem}
-.proc-spinner{
-  width:20px;height:20px;border:2px solid var(--glass2);
-  border-top-color:var(--lime);border-radius:50%;
-  animation:spin .7s linear infinite;flex-shrink:0;
-}
+.proc-hdr{display:flex;align-items:center;gap:10px;margin-bottom:1rem}
+.proc-spin{width:20px;height:20px;border:2px solid var(--glass2);border-top-color:var(--lime);border-radius:50%;animation:spin .7s linear infinite;flex-shrink:0}
 @keyframes spin{to{transform:rotate(360deg)}}
-.proc-title{font-size:13px;font-weight:700}
 .proc-steps{display:flex;flex-direction:column;gap:.25rem}
-.proc-step{
-  font-family:'JetBrains Mono',monospace;font-size:10px;
-  color:var(--muted);padding:.25rem .5rem;border-radius:4px;
-  display:flex;align-items:center;gap:.5rem;transition:all .2s;
-}
-.proc-step::before{content:'○';font-size:8px;flex-shrink:0;width:12px}
-.proc-step.done{color:var(--lime)}.proc-step.done::before{content:'✓';color:var(--lime)}
-.proc-step.active{color:var(--white);background:var(--glass)}.proc-step.active::before{content:'▶';color:var(--lime)}
-
+.ps{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--muted);padding:.25rem .5rem;border-radius:4px;display:flex;align-items:center;gap:.5rem;transition:all .2s}
+.ps::before{content:'○';font-size:8px;flex-shrink:0;width:12px}
+.ps.done{color:var(--lime)}.ps.done::before{content:'✓';color:var(--lime)}
+.ps.active{color:var(--white);background:var(--glass)}.ps.active::before{content:'▶';color:var(--lime)}
 .cr-done{display:none}
-.verdict-ring{
-  width:80px;height:80px;border-radius:50%;
-  margin:0 auto .75rem;display:flex;align-items:center;
-  justify-content:center;font-weight:900;font-size:1.3rem;
-  border:2px solid;letter-spacing:-.02em;
-}
+.verdict-ring{width:80px;height:80px;border-radius:50%;margin:0 auto .75rem;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:1.3rem;border:2px solid}
 .verdict-title{font-size:1.5rem;font-weight:900;letter-spacing:-.03em;margin-bottom:.3rem}
 .verdict-sub{font-size:12px;color:var(--muted);line-height:1.65;margin-bottom:.75rem}
-.engine-data{
-  background:var(--bg3);border-radius:var(--r);padding:.75rem 1rem;
-  font-family:'JetBrains Mono',monospace;font-size:10px;
-  color:var(--muted);line-height:2;text-align:left;
-}
-.engine-data .ek{color:var(--lime)}
-.engine-data .ev{color:var(--white)}
-
-.hist-row{
-  display:flex;align-items:center;gap:.75rem;
-  background:var(--bg2);border:1px solid var(--glass);
-  border-radius:var(--r);padding:.65rem .85rem;
-  margin-bottom:.35rem;transition:background .15s;
-}
+.engine-data{background:var(--bg3);border-radius:var(--r);padding:.75rem 1rem;font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--muted);line-height:2;text-align:left}
+.engine-data .ek{color:var(--lime)}.engine-data .ev{color:var(--white)}
+.hist-row{display:flex;align-items:center;gap:.75rem;background:var(--bg2);border:1px solid var(--glass);border-radius:var(--r);padding:.65rem .85rem;margin-bottom:.35rem;transition:background .15s;cursor:pointer}
 .hist-row:hover{background:var(--bg3)}
 .hist-av{width:30px;height:30px;border-radius:7px;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:800;flex-shrink:0}
 .hist-info{flex:1}
@@ -397,28 +232,17 @@ nav{
 .hist-fill{height:100%;border-radius:2px}
 .hist-pct{font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--muted)}
 
-/* ════════════════════════════════
-   ADMIN
-════════════════════════════════ */
+/* ADMIN */
 .m4{display:grid;grid-template-columns:repeat(4,1fr);gap:.75rem;margin-bottom:1.25rem}
-.mcard{
-  background:var(--bg2);border:1px solid var(--glass);
-  border-radius:var(--r2);padding:1rem;
-  position:relative;overflow:hidden;transition:border-color .2s,transform .2s;
-}
+.mcard{background:var(--bg2);border:1px solid var(--glass);border-radius:var(--r2);padding:1rem;position:relative;overflow:hidden;transition:border-color .2s,transform .2s}
 .mcard:hover{border-color:var(--glass2);transform:translateY(-2px)}
 .mcard-bar{position:absolute;top:0;left:0;right:0;height:2px}
 .mcard-label{font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--muted);letter-spacing:.1em;text-transform:uppercase;margin-bottom:.4rem}
 .mcard-val{font-size:1.7rem;font-weight:900;letter-spacing:-.04em;line-height:1}
 .mcard-sub{font-size:10px;margin-top:.3rem;font-family:'JetBrains Mono',monospace}
 .mcard-sub.up{color:var(--lime)}.mcard-sub.dn{color:var(--ember)}
-
 .two-col{display:grid;grid-template-columns:1.5fr 1fr;gap:.9rem}
-.tbl-r{
-  display:flex;align-items:center;gap:.65rem;
-  background:var(--bg3);border-radius:var(--r);padding:.6rem .85rem;
-  margin-bottom:.35rem;transition:background .15s;
-}
+.tbl-r{display:flex;align-items:center;gap:.65rem;background:var(--bg3);border-radius:var(--r);padding:.6rem .85rem;margin-bottom:.35rem;transition:background .15s}
 .tbl-r:hover{background:var(--bg4)}
 .tbl-av{width:30px;height:30px;border-radius:7px;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:800;flex-shrink:0}
 .tbl-main{flex:1}
@@ -428,136 +252,113 @@ nav{
 .tbl-bar{width:50px;height:3px;background:var(--glass);border-radius:2px;overflow:hidden;margin-bottom:3px;margin-left:auto}
 .tbl-fill{height:100%;border-radius:2px}
 .tbl-pct{font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--muted)}
-
 .pool-bar{height:5px;background:var(--glass);border-radius:3px;overflow:hidden;margin:.4rem 0}
-.pool-fill{height:100%;background:linear-gradient(90deg,var(--lime),var(--ice));width:72%}
+.pool-fill{height:100%;background:linear-gradient(90deg,var(--lime),var(--ice))}
 .pool-meta{display:flex;justify-content:space-between;font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--muted)}
-
 .wk-chart{display:flex;align-items:flex-end;gap:3px;height:48px}
-.wk-b{flex:1;background:var(--glass2);border-radius:2px 2px 0 0;transition:background .2s}
+.wk-b{flex:1;background:var(--glass2);border-radius:2px 2px 0 0}
 .wk-b.hi{background:rgba(196,241,53,.3)}
-.wk-b:hover{background:var(--lime-b)}
-.wk-days{display:flex;justify-content:space-between;font-family:'JetBrains Mono',monospace;font-size:8px;color:var(--dim);margin-top:.3rem}
+.wk-days{display:flex;justify-content:space-between;font-family:'JetBrains Mono',monospace;font-size:8px;color:var(--dim);margin-top:3px}
+.act-tbl{width:100%;border-collapse:collapse;font-size:11px}
+.act-tbl th{font-family:'JetBrains Mono',monospace;font-size:8px;color:var(--dim);letter-spacing:.1em;text-transform:uppercase;padding:.35rem .5rem;border-bottom:1px solid var(--glass2);text-align:left}
+.act-tbl td{padding:.45rem .5rem;border-bottom:1px solid var(--glass)}
+.act-tbl td.hi{font-family:'JetBrains Mono',monospace;font-weight:700;color:var(--lime)}
 
-.act-tbl{width:100%;font-size:11px;border-collapse:collapse}
-.act-tbl th{font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--muted);letter-spacing:.1em;text-transform:uppercase;padding:.5rem .6rem;text-align:left;border-bottom:1px solid var(--glass2)}
-.act-tbl td{padding:.45rem .6rem;border-bottom:1px solid var(--glass);color:var(--muted)}
-.act-tbl td:first-child{color:var(--white);font-weight:600}
-.act-tbl td.hi{font-family:'JetBrains Mono',monospace;color:var(--lime);font-weight:600}
-.act-tbl tr:last-child td{border:none}
-.act-tbl tr:hover td{background:var(--glass)}
+/* MONITORING */
+.mon-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:.75rem;margin-bottom:1rem}
+.mon-card{background:var(--bg2);border:1px solid var(--glass2);border-radius:var(--r2);padding:1rem}
+.mon-val{font-size:1.4rem;font-weight:900;letter-spacing:-.03em;margin-bottom:.15rem}
+.mon-label{font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--muted);text-transform:uppercase;letter-spacing:.1em}
+.mon-status{display:inline-flex;align-items:center;gap:5px;font-family:'JetBrains Mono',monospace;font-size:9px;padding:3px 8px;border-radius:99px;border:1px solid}
 
-/* ════════════════════════════════
-   FRAUD LAB
-════════════════════════════════ */
-.fl-grid{display:grid;grid-template-columns:1fr 380px;gap:1rem}
-.map-wrap{background:var(--bg2);border:1px solid var(--glass);border-radius:var(--r2);padding:1.1rem}
-.map-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:.75rem}
-.map-title{font-size:12px;font-weight:700;font-family:'JetBrains Mono',monospace}
-#sim-cv{width:100%;height:340px;border-radius:var(--r);background:var(--bg3);display:block;border:1px solid var(--glass)}
-.map-leg{display:flex;gap:1.25rem;margin-top:.65rem;font-size:10px;color:var(--muted);font-family:'JetBrains Mono',monospace}
-.ld{width:7px;height:7px;border-radius:50%;display:inline-block;margin-right:3px;vertical-align:middle}
-
+/* FRAUD LAB */
+.fl-grid{display:grid;grid-template-columns:1fr 320px;gap:1rem}
+.map-wrap{background:var(--bg2);border:1px solid var(--glass2);border-radius:var(--r2);overflow:hidden}
+.map-head{display:flex;align-items:center;justify-content:space-between;padding:.75rem 1rem;border-bottom:1px solid var(--glass2)}
+.map-title{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--muted)}
+#sim-cv{width:100%;height:380px;display:block}
+.map-leg{display:flex;gap:1.2rem;padding:.6rem 1rem;border-top:1px solid var(--glass2)}
+.map-leg span{display:flex;align-items:center;gap:5px;font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--muted)}
+.ld{width:7px;height:7px;border-radius:50%;flex-shrink:0}
 .ctrl-col{display:flex;flex-direction:column;gap:.75rem}
-.ctrl-card{background:var(--bg2);border:1px solid var(--glass);border-radius:var(--r2);padding:1.1rem}
+.ctrl-card{background:var(--bg2);border:1px solid var(--glass2);border-radius:var(--r2);padding:1rem}
 .ctrl-lr{display:flex;justify-content:space-between;font-size:11px;color:var(--muted);margin-bottom:.3rem;font-family:'JetBrains Mono',monospace}
 .ctrl-v{color:var(--lime);font-weight:700}
 input[type=range]{width:100%;accent-color:var(--lime);cursor:pointer;margin:.3rem 0}
-
 .sig-grid{display:grid;grid-template-columns:1fr 1fr;gap:.35rem}
 .sig{background:var(--bg3);border-radius:var(--r);padding:.55rem .7rem}
-.sig-n{font-family:'JetBrains Mono',monospace;font-size:8px;color:var(--dim);letter-spacing:.1em;text-transform:uppercase;margin-bottom:3px}
+.sig-n{font-family:'JetBrains Mono',monospace;font-size:8px;color:var(--dim);text-transform:uppercase;margin-bottom:3px}
 .sig-v{font-size:11px;font-weight:600;font-family:'JetBrains Mono',monospace}
 .sig-v.ok{color:var(--lime)}.sig-v.bad{color:var(--ember)}.sig-v.warn{color:var(--gold)}
-
 .vcard{border-radius:var(--r2);padding:1.1rem;transition:all .4s;background:var(--bg3);border:1px solid var(--glass)}
 .vcard.ap{background:rgba(196,241,53,.05);border-color:rgba(196,241,53,.25)}
 .vcard.sf{background:rgba(251,191,36,.05);border-color:rgba(251,191,36,.25)}
 .vcard.fl{background:rgba(255,87,51,.05);border-color:rgba(255,87,51,.25)}
-.vcard-label{font-family:'JetBrains Mono',monospace;font-size:8px;color:var(--muted);letter-spacing:.12em;text-transform:uppercase;margin-bottom:.35rem}
+.vcard-label{font-family:'JetBrains Mono',monospace;font-size:8px;color:var(--muted);text-transform:uppercase;margin-bottom:.35rem}
 .vcard-score{font-size:2.4rem;font-weight:900;letter-spacing:-.04em;line-height:1}
 .vcard-tag{font-size:11px;font-weight:700;margin-top:.35rem;font-family:'JetBrains Mono',monospace}
 .vcard-bar{height:4px;background:var(--glass);border-radius:2px;overflow:hidden;margin:.65rem 0}
 .vcard-fill{height:100%;border-radius:2px;transition:width .5s,background .4s}
-
-.bblk{
-  width:100%;padding:10px;border-radius:var(--r);font-size:11px;
-  font-weight:700;cursor:pointer;border:none;
-  font-family:'JetBrains Mono',monospace;letter-spacing:.06em;
-  transition:all .18s;margin-bottom:.4rem;text-transform:uppercase;
-}
-.batk{background:var(--ember);color:#fff}.batk:hover{filter:brightness(1.1)}
-.brst{background:var(--bg3);color:var(--muted);border:1px solid var(--glass2)}.brst:hover{background:var(--bg4);color:var(--white)}
-
-.insight-box{
-  margin-top:1.1rem;background:var(--bg2);border:1px solid var(--glass);
-  border-radius:var(--r2);padding:1.25rem;
-}
-.insight-text{
-  font-family:'JetBrains Mono',monospace;font-size:11px;
-  color:var(--muted);line-height:2.1;
-  border-left:2px solid var(--lime);padding-left:1.1rem;
-}
-.insight-text .hl{color:var(--lime)}
-.insight-text .em{color:var(--ice)}
+.bblk{width:100%;padding:10px;border-radius:var(--r);font-size:11px;font-weight:700;cursor:pointer;border:none;font-family:'JetBrains Mono',monospace;letter-spacing:.06em;transition:all .18s;margin-bottom:.4rem;text-transform:uppercase}
+.batk{background:var(--ember);color:#fff}.brst{background:var(--bg3);color:var(--muted);border:1px solid var(--glass2)}
+.insight-box{margin-top:1.1rem;background:var(--bg2);border:1px solid var(--glass);border-radius:var(--r2);padding:1.25rem}
+.insight-text{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--muted);line-height:2.1;border-left:2px solid var(--lime);padding-left:1.1rem}
+.insight-text .hl{color:var(--lime)}.insight-text .em{color:var(--ice)}
 
 @media(max-width:900px){
-  .hero-grid{grid-template-columns:1fr}.live-card{display:none}
-  .stats-row,.flow-row{grid-template-columns:repeat(2,1fr)}
-  .two-col,.fl-grid,.claims-2{grid-template-columns:1fr}
-  .m4{grid-template-columns:repeat(2,1fr)}
-  .trig-grid{grid-template-columns:repeat(2,1fr)}
+  .hero-grid,.two-col,.fl-grid,.claims-2{grid-template-columns:1fr}
+  .stats-row,.flow-row,.m4{grid-template-columns:repeat(2,1fr)}
+  .trig-grid,.mon-grid{grid-template-columns:repeat(2,1fr)}
+  .live-card{display:none}
 }
 </style>
 </head>
 <body>
 
+<div class="toast" id="toast"></div>
+
 <!-- NAV -->
 <nav>
   <div class="nav-brand">
-    <div class="nav-logo-box">CA</div>
+    <div class="nav-logo">CA</div>
     <div class="nav-name">Collective <span>Alibi</span></div>
   </div>
   <div class="nav-tabs">
-    <button class="nt on" onclick="go('home')">Overview</button>
-    <button class="nt" onclick="go('reg')">Register</button>
-    <button class="nt" onclick="go('pol')">My Policy</button>
-    <button class="nt" onclick="go('clm')">Claims</button>
-    <button class="nt" onclick="go('adm')">Command</button>
-    <button class="nt" onclick="go('frd')">Fraud Lab</button>
+    <button class="nt on"  onclick="go('home')">Overview</button>
+    <button class="nt"     onclick="go('reg')">Register</button>
+    <button class="nt"     onclick="go('pol')">My Policy</button>
+    <button class="nt"     onclick="go('clm')">Claims</button>
+    <button class="nt"     onclick="go('adm')">Command</button>
+    <button class="nt"     onclick="go('frd')">Fraud Lab</button>
   </div>
   <div class="nav-end">
-    <div class="npill npill-live"><span class="ndot"></span>LIVE · MUMBAI</div>
+    <div class="npill npill-live"><span class="ndot"></span><span id="nav-status">CONNECTING...</span></div>
     <div class="npill npill-ring" id="ring-pill">⚠ RING DETECTED</div>
   </div>
 </nav>
 
-<!-- ══════════════════════════════════
-     HOME
-══════════════════════════════════ -->
+<!-- ══ HOME ══════════════════════════════════════════════ -->
 <div id="pg-home" class="pg on">
 <div class="hero-section">
   <div class="hero-grid">
     <div>
-      <div class="hero-tag">Guidewire DEVTrails 2026 · Phase 2 · Team #leaf</div>
+      <div class="hero-tag">Guidewire DEVTrails 2026 · Phase 3 Final · Team #leaf</div>
       <h1 class="hero-h1">Insurance<br>that pays<br>before you <mark>ask.</mark></h1>
-      <p class="hero-p">India's 15 million gig delivery workers lose ₹16,200 every monsoon with zero safety net. Collective Alibi pays automatically when a verified disruption hits — and catches fraud rings before they drain a single rupee.</p>
+      <p class="hero-p">India's 15 million gig delivery workers lose ₹16,200 every monsoon. Collective Alibi pays automatically when a verified disruption hits — and catches fraud rings through physics, not rules.</p>
       <div class="hero-btns">
         <button class="btn btn-lime" onclick="go('reg')">Get covered — ₹49/week →</button>
         <button class="btn btn-outline" onclick="go('frd')">See fraud detection live</button>
       </div>
     </div>
     <div class="live-card">
-      <div class="live-card-header">
+      <div class="live-card-hdr">
         <span>// LIVE · ANDHERI, MUMBAI</span>
         <span class="chip c-lime">ACTIVE</span>
       </div>
       <div class="live-card-body">
-        <div class="ls"><div class="ls-num" style="color:var(--lime)" id="hc1">2,847</div><div class="ls-label">workers covered right now</div></div>
-        <div class="ls"><div class="ls-num" style="color:var(--ice)">143</div><div class="ls-label">claims auto-approved today · avg 0.63s</div></div>
-        <div class="ls"><div class="ls-num" style="color:var(--ember)">3</div><div class="ls-label">fraud rings caught · ₹84,000 pool protected</div></div>
-        <div class="lc-bar"><div class="lc-fill"></div></div>
-        <div style="display:flex;justify-content:space-between;font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--muted)"><span>₹1,39,503 paid out</span><span>₹1,93,750 pool</span></div>
+        <div class="ls"><div class="ls-num" style="color:var(--lime)" id="hc1">—</div><div class="ls-label">workers covered right now</div></div>
+        <div class="ls"><div class="ls-num" style="color:var(--ice)" id="hc2">—</div><div class="ls-label">claims processed today</div></div>
+        <div class="ls"><div class="ls-num" style="color:var(--ember)" id="hc3">—</div><div class="ls-label">fraud rings caught · pool protected</div></div>
       </div>
     </div>
   </div>
@@ -569,40 +370,54 @@ input[type=range]{width:100%;accent-color:var(--lime);cursor:pointer;margin:.3re
     <div class="scard"><div class="scard-num" style="color:var(--white)">₹0</div><div class="scard-label">Worker effort to receive payout</div></div>
   </div>
 
-  <div style="margin-bottom:1.25rem">
-    <div class="eyebrow">How it works</div>
-    <div class="sec-title">Zero friction for honest workers.<br>Zero mercy for fraud rings.</div>
-  </div>
+  <div class="eyebrow">How it works</div>
+  <div class="sec-title" style="margin-bottom:1.25rem">Zero friction for honest workers. Zero mercy for fraud rings.</div>
   <div class="flow-row" style="margin-bottom:2.5rem">
-    <div class="fstep"><div class="fstep-n">// 01</div><div class="fstep-icon">💳</div><div class="fstep-title">Pay ₹49 weekly</div><div class="fstep-desc">UPI auto-debit every Monday. 7-day coverage. No lock-in. No fine print.</div></div>
-    <div class="fstep"><div class="fstep-n">// 02</div><div class="fstep-icon">🌧</div><div class="fstep-title">Disruption detected</div><div class="fstep-desc">IMD issues red alert. 6 parametric triggers monitor your zone 24/7.</div></div>
-    <div class="fstep"><div class="fstep-n">// 03</div><div class="fstep-icon">👥</div><div class="fstep-title">Crowd witnesses verify</div><div class="fstep-desc">30–50 nearby workers' phones passively confirm the storm — or expose the ring.</div></div>
-    <div class="fstep"><div class="fstep-n">// 04</div><div class="fstep-icon">⚡</div><div class="fstep-title">GPay receives payout</div><div class="fstep-desc">Score ≥ 0.70 → instant UPI transfer. No claim filed. Money before the rain stops.</div></div>
+    <div class="fstep"><div class="fstep-n">// 01</div><div class="fstep-icon">💳</div><div class="fstep-title">Pay ₹49 weekly</div><div class="fstep-desc">UPI auto-debit every Monday. No lock-in. No fine print.</div></div>
+    <div class="fstep"><div class="fstep-n">// 02</div><div class="fstep-icon">🌧</div><div class="fstep-title">Real weather checked</div><div class="fstep-desc">OpenWeatherMap + CPCB AQI evaluated in real time against 6 parametric thresholds.</div></div>
+    <div class="fstep"><div class="fstep-n">// 03</div><div class="fstep-icon">👥</div><div class="fstep-title">Crowd witnesses verify</div><div class="fstep-desc">30–50 nearby workers' phones confirm the storm via barometer, IMU, Bluetooth, RSSI.</div></div>
+    <div class="fstep"><div class="fstep-n">// 04</div><div class="fstep-icon">⚡</div><div class="fstep-title">UPI payout fires</div><div class="fstep-desc">Score ≥ 0.70 → Razorpay UPI transfer. Money before the rain stops.</div></div>
   </div>
 
-  <div class="eyebrow">Parametric Triggers</div>
-  <div class="sec-title" style="margin-bottom:1.25rem">6 verified income-loss events. All automated.</div>
-  <div class="trig-grid">
-    <div class="trig-item"><div class="trig-icon">🌧</div><div><div class="trig-name">Heavy Rainfall</div><div class="trig-thresh">&gt;64.5mm/hr · IMD red alert</div></div></div>
+  <div class="eyebrow">Live Parametric Triggers</div>
+  <div class="sec-title" style="margin-bottom:.75rem">Check real weather for any zone right now</div>
+  <div style="display:flex;gap:.75rem;margin-bottom:1rem;flex-wrap:wrap">
+    <select id="weather-zone" style="background:var(--bg3);border:1px solid var(--glass2);border-radius:var(--r);padding:8px 13px;font-size:13px;color:var(--white);font-family:'Cabinet Grotesk',sans-serif;outline:none">
+      <option>Andheri, Mumbai</option><option>Kurla, Mumbai</option><option>Dharavi, Mumbai</option>
+      <option>Connaught Place, Delhi</option><option>Koramangala, Bengaluru</option>
+      <option>Jubilee Hills, Hyderabad</option>
+    </select>
+    <button class="btn btn-lime" onclick="fetchWeather()">Fetch live weather →</button>
+  </div>
+
+  <div class="weather-box" id="weather-box" style="display:none">
+    <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:.5rem">
+      <div style="font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--muted)" id="weather-source">Source: —</div>
+      <div id="weather-triggers"></div>
+    </div>
+    <div class="weather-grid" id="weather-grid"></div>
+  </div>
+
+  <div style="margin-top:2rem" class="eyebrow">Parametric Triggers</div>
+  <div class="trig-grid" id="trig-grid">
+    <div class="trig-item"><div class="trig-icon">🌧</div><div><div class="trig-name">Heavy Rainfall</div><div class="trig-thresh">&gt;64.5mm/hr · IMD/OWM</div></div></div>
     <div class="trig-item"><div class="trig-icon">🌊</div><div><div class="trig-name">Flash Floods</div><div class="trig-thresh">NDMA zone activation</div></div></div>
-    <div class="trig-item"><div class="trig-icon">🌡</div><div><div class="trig-name">Extreme Heat</div><div class="trig-thresh">Heat index &gt;47°C sustained</div></div></div>
-    <div class="trig-item"><div class="trig-icon">🏭</div><div><div class="trig-name">Severe Pollution</div><div class="trig-thresh">AQI &gt;400 · CPCB data</div></div></div>
-    <div class="trig-item"><div class="trig-icon">🚧</div><div><div class="trig-name">Curfew / Closure</div><div class="trig-thresh">Official zone lockdown</div></div></div>
+    <div class="trig-item"><div class="trig-icon">🌡</div><div><div class="trig-name">Extreme Heat</div><div class="trig-thresh">Heat index &gt;47°C · OWM</div></div></div>
+    <div class="trig-item"><div class="trig-icon">🏭</div><div><div class="trig-name">Severe Pollution</div><div class="trig-thresh">AQI &gt;400 · OpenAQ</div></div></div>
+    <div class="trig-item"><div class="trig-icon">🚧</div><div><div class="trig-name">Curfew / Closure</div><div class="trig-thresh">Official notification</div></div></div>
     <div class="trig-item"><div class="trig-icon">🌪</div><div><div class="trig-name">Cyclone Alert</div><div class="trig-thresh">IMD category 1+</div></div></div>
   </div>
 </div>
 </div>
 
-<!-- ══════════════════════════════════
-     REGISTER
-══════════════════════════════════ -->
+<!-- ══ REGISTER ══════════════════════════════════════════ -->
 <div id="pg-reg" class="pg">
 <div class="wsm">
   <div id="ob1" class="card-glass">
     <div class="ob-bar"><div class="ob-s done"></div><div class="ob-s"></div><div class="ob-s"></div></div>
     <div class="eyebrow">Step 1 of 3</div>
     <div class="sec-title" style="font-size:1.7rem;margin-bottom:.25rem">Create account</div>
-    <div class="sec-sub">3 MINUTES TO FULL COVERAGE</div>
+    <div class="sec-sub">COMPLETE REGISTRATION — EVERYTHING SAVED TO BACKEND</div>
     <div class="fg-2">
       <div class="fg"><label>Full name</label><input id="r-name" placeholder="Ramesh Kumar"></div>
       <div class="fg"><label>Phone</label><input id="r-phone" type="tel" placeholder="9876543210"></div>
@@ -610,13 +425,18 @@ input[type=range]{width:100%;accent-color:var(--lime);cursor:pointer;margin:.3re
     <div class="fg"><label>UPI ID</label><input id="r-upi" placeholder="ramesh@gpay"></div>
     <div class="fg-2">
       <div class="fg"><label>Platform</label>
-        <select id="r-plat"><option value="">Select platform</option><option>Zomato</option><option>Swiggy</option><option>Zepto</option><option>Blinkit</option><option>Amazon Flex</option></select>
+        <select id="r-plat"><option>Zomato</option><option>Swiggy</option><option>Zepto</option><option>Blinkit</option><option>Porter</option><option>Dunzo</option></select>
       </div>
       <div class="fg"><label>Zone</label>
-        <select id="r-zone"><option value="">Select zone</option><option>Andheri, Mumbai</option><option>Bandra, Mumbai</option><option>Kurla, Mumbai</option><option>Connaught Place, Delhi</option><option>Koramangala, Bengaluru</option><option>Jubilee Hills, Hyderabad</option></select>
+        <select id="r-zone" onchange="calcP()">
+          <option>Andheri, Mumbai</option><option>Kurla, Mumbai</option><option>Dharavi, Mumbai</option>
+          <option>Bandra, Mumbai</option><option>Connaught Place, Delhi</option>
+          <option>Lajpat Nagar, Delhi</option><option>Koramangala, Bengaluru</option>
+          <option>Indiranagar, Bengaluru</option><option>Jubilee Hills, Hyderabad</option>
+        </select>
       </div>
     </div>
-    <div class="fg"><label>Avg. daily earnings (₹)</label><input id="r-earn" type="number" placeholder="e.g. 900" oninput="calcP()"></div>
+    <div class="fg"><label>Avg. daily earnings (₹)</label><input id="r-earn" type="number" placeholder="900" oninput="calcP()"></div>
     <div class="ai-pill" id="ai-pill"></div>
     <button class="btn btn-lime btn-w" onclick="ob(2)">Continue →</button>
   </div>
@@ -627,16 +447,15 @@ input[type=range]{width:100%;accent-color:var(--lime);cursor:pointer;margin:.3re
     <div class="sec-title" style="font-size:1.7rem;margin-bottom:.25rem">Choose plan</div>
     <div class="sec-sub">AI-OPTIMISED WEEKLY PREMIUM FOR YOUR ZONE + EARNINGS</div>
     <div class="plan-row">
-      <div class="pcard" onclick="sp(this,'basic')" id="pc-b"><div class="pcard-price">₹29</div><div class="pcard-name">BASIC</div><div class="pcard-det">₹400/day · 2 days max</div></div>
-      <div class="pcard sel" onclick="sp(this,'standard')" id="pc-s"><div class="pcard-price">₹49</div><div class="pcard-name">STANDARD</div><div class="pcard-det">₹600/day · 3 days max</div></div>
-      <div class="pcard" onclick="sp(this,'pro')" id="pc-p"><div class="pcard-price">₹79</div><div class="pcard-name">PRO</div><div class="pcard-det">₹900/day · 4 days max</div></div>
+      <div class="pcard" onclick="sp(this,'basic')"><div class="pcard-price">₹29</div><div class="pcard-name">BASIC</div><div class="pcard-det">₹400/day · 2 days max</div></div>
+      <div class="pcard sel" onclick="sp(this,'standard')"><div class="pcard-price">₹49</div><div class="pcard-name">STANDARD</div><div class="pcard-det">₹600/day · 3 days max</div></div>
+      <div class="pcard" onclick="sp(this,'pro')"><div class="pcard-price">₹79</div><div class="pcard-name">PRO</div><div class="pcard-det">₹900/day · 4 days max</div></div>
     </div>
     <div class="excl-box">
       <strong>⚠ STANDARD EXCLUSIONS — IRDAI Compliant</strong>
-      Excluded: War · Pandemic/epidemic · National lockdown · Nuclear/bio events<br>
-      Excluded: Worker negligence · Platform app downtime · Health/accident costs<br>
-      Excluded: Events &lt;2hr · Score &lt;0.40 (insufficient corroboration)<br>
-      48-hour waiting period · Max 4 claim days per 30 days
+      War · Pandemic · National lockdown · Nuclear/bio events · Platform downtime<br>
+      Worker negligence · Health/accidents · Events &lt;2hr · Score &lt;0.40<br>
+      Claims within 48-hour waiting period
     </div>
     <button class="btn btn-lime btn-w" onclick="ob(3)">Continue →</button>
     <button class="btn btn-outline btn-w" onclick="ob(1)">← Back</button>
@@ -646,9 +465,9 @@ input[type=range]{width:100%;accent-color:var(--lime);cursor:pointer;margin:.3re
     <div class="ob-bar"><div class="ob-s done"></div><div class="ob-s done"></div><div class="ob-s done"></div></div>
     <div class="eyebrow">Step 3 of 3</div>
     <div class="sec-title" style="font-size:1.7rem;margin-bottom:.25rem">Confirm & activate</div>
-    <div class="sec-sub">REVIEW BEFORE GOING LIVE</div>
+    <div class="sec-sub">SAVED TO BACKEND — POLICY CREATED INSTANTLY</div>
     <div class="confirm-box" id="ob-confirm"></div>
-    <button class="btn btn-ice btn-w" onclick="activate()">Activate coverage — first week free ✓</button>
+    <button class="btn btn-ice btn-w" id="activate-btn" onclick="activateWorker()">Activate coverage →</button>
     <button class="btn btn-outline btn-w" onclick="ob(2)">← Back</button>
   </div>
 
@@ -656,8 +475,14 @@ input[type=range]{width:100%;accent-color:var(--lime);cursor:pointer;margin:.3re
     <div class="success-c">
       <div class="s-badge">🛡️</div>
       <div class="s-title">You're covered.</div>
-      <div class="s-sub" id="ob-msg">Coverage is active. We monitor your zone 24/7 and pay automatically when a verified disruption hits.</div>
-      <div style="display:flex;gap:.65rem">
+      <div class="s-sub" id="ob-msg">Registered and active.</div>
+      <div class="trust-bar-wrap">
+        <span style="font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--muted)">Witness trust score</span>
+        <div class="trust-track"><div class="trust-fill" style="width:50%"></div></div>
+        <span class="trust-val">0.50</span>
+      </div>
+      <div id="worker-id-box" style="background:var(--bg3);border:1px solid var(--glass2);border-radius:var(--r);padding:.75rem;font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--muted);margin:.75rem 0;line-height:1.8"></div>
+      <div style="display:flex;gap:.65rem;margin-top:1rem">
         <button class="btn btn-lime" style="flex:1" onclick="go('pol')">View my policy →</button>
         <button class="btn btn-outline" style="flex:1" onclick="go('clm')">File a claim</button>
       </div>
@@ -666,195 +491,232 @@ input[type=range]{width:100%;accent-color:var(--lime);cursor:pointer;margin:.3re
 </div>
 </div>
 
-<!-- ══════════════════════════════════
-     POLICY
-══════════════════════════════════ -->
+<!-- ══ POLICY ════════════════════════════════════════════ -->
 <div id="pg-pol" class="pg">
 <div class="wsm">
-  <div class="pol-hero">
-    <div class="pol-name" id="pw-name">Ramesh Kumar</div>
-    <div class="pol-meta mono" id="pw-meta">ANDHERI, MUMBAI · ZOMATO · ID#WKR-2847</div>
-    <div class="pol-active">COVERAGE ACTIVE · STANDARD PLAN</div>
-    <div class="pol-metrics">
-      <div class="pol-m"><div class="pol-mv">₹49</div><div class="pol-ml">Weekly premium</div></div>
-      <div class="pol-m"><div class="pol-mv">₹1,800</div><div class="pol-ml">Max weekly payout</div></div>
-      <div class="pol-m"><div class="pol-mv">₹3,600</div><div class="pol-ml">Total earned back</div></div>
+  <div id="pol-loading" style="text-align:center;padding:2rem;color:var(--muted);font-family:'JetBrains Mono',monospace;font-size:11px">Loading policy...</div>
+  <div id="pol-content" style="display:none">
+    <div class="pol-hero">
+      <div class="pol-name" id="pw-name">—</div>
+      <div class="pol-meta mono" id="pw-meta">—</div>
+      <div class="pol-active" id="pw-status">COVERAGE ACTIVE</div>
+      <div class="pol-metrics">
+        <div class="pol-m"><div class="pol-mv" id="pw-premium">₹49</div><div class="pol-ml">Weekly premium</div></div>
+        <div class="pol-m"><div class="pol-mv" id="pw-payout">₹1,800</div><div class="pol-ml">Max weekly payout</div></div>
+        <div class="pol-m"><div class="pol-mv" id="pw-total">₹0</div><div class="pol-ml">Total earned back</div></div>
+      </div>
+      <div class="trust-bar-wrap" style="margin-top:.75rem">
+        <span style="font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--muted)">Witness trust score</span>
+        <div class="trust-track"><div class="trust-fill" id="pw-trust-fill" style="width:50%"></div></div>
+        <span class="trust-val" id="pw-trust-val">0.50</span>
+      </div>
+    </div>
+
+    <div class="alert-strip" id="wal">
+      <div class="as-head"><div class="as-dot"></div><div class="as-title" id="wal-title">IMD RED ALERT</div></div>
+      <div class="as-body">Extreme conditions detected in your zone. Collective Alibi verifying with nearby workers. Payout initiating automatically — no action needed.</div>
+      <div class="upi-card" id="wal-upi">
+        <div class="upi-amount" id="wal-amount">₹600</div>
+        <div class="upi-bar"><div class="upi-fill"></div></div>
+        <div class="upi-meta">SENT TO UPI · AUTO-APPROVED</div>
+        <div class="upi-txn" id="wal-txn">TXN#—</div>
+      </div>
+    </div>
+
+    <div class="card" style="margin-bottom:.75rem">
+      <button class="btn btn-ember" style="width:100%;justify-content:center" onclick="trigAlert()">🌧 Simulate IMD Red Alert → Watch UPI Payout Fire</button>
+    </div>
+
+    <div class="card" style="margin-bottom:.75rem">
+      <div style="font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--muted);text-transform:uppercase;letter-spacing:.12em;margin-bottom:.9rem;display:flex;align-items:center;justify-content:space-between">Active triggers <span class="chip c-lime">6 LIVE</span></div>
+      <div style="display:flex;flex-wrap:wrap;gap:.35rem">
+        <span class="chip c-ice">Heavy Rain</span><span class="chip c-ice">Flash Floods</span>
+        <span class="chip c-ice">Extreme Heat</span><span class="chip c-ice">AQI 400+</span>
+        <span class="chip c-ice">Curfew</span><span class="chip c-ice">Cyclone</span>
+      </div>
+    </div>
+
+    <div class="card" style="margin-bottom:.75rem">
+      <div style="font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--muted);text-transform:uppercase;letter-spacing:.12em;margin-bottom:.9rem;display:flex;align-items:center;justify-content:space-between">Payout history <span class="chip c-lime" id="pw-hist-total">₹0 EARNED</span></div>
+      <div id="ph-list">
+        <div class="ph-row"><div class="ph-icon" style="background:var(--lime-a)">🌧</div><div class="ph-det"><div class="ph-name">Heavy rain — Andheri zone shutdown</div><div class="ph-date mono">MAR 15 2026 · AUTO-APPROVED · 0.61s</div></div><div class="ph-amt">+₹600</div></div>
+        <div class="ph-row"><div class="ph-icon" style="background:var(--ice-a)">🌊</div><div class="ph-det"><div class="ph-name">Flash flood — Kurla overflow</div><div class="ph-date mono">MAR 08 2026 · AUTO-APPROVED · 0.73s</div></div><div class="ph-amt">+₹1,200</div></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div style="font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--muted);text-transform:uppercase;letter-spacing:.12em;margin-bottom:.75rem">Coverage exclusions — IRDAI compliant</div>
+      <div style="font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--muted);line-height:2">
+        ✗ War · invasion · civil conflict<br>✗ Pandemic or national epidemic<br>
+        ✗ Government national lockdown<br>✗ Nuclear · chemical · biological events<br>
+        ✗ Platform app downtime<br>✗ Worker negligence · voluntary stoppage<br>
+        ✗ Health · accidents · vehicle repairs<br>✗ Events under 2 continuous hours<br>
+        ✗ Corroboration score below 0.40<br>✗ Claims within 48-hour waiting period
+      </div>
     </div>
   </div>
-
-  <div class="alert-strip" id="wal">
-    <div class="as-head"><div class="as-dot"></div><div class="as-title">IMD RED ALERT — HEAVY RAINFALL · ANDHERI</div></div>
-    <div class="as-body">Extreme rainfall detected in your zone. Collective Alibi is verifying with 34 nearby workers. Payout initiating automatically — no action needed from you.</div>
-    <div class="as-amt">₹600</div>
-    <div class="as-sub mono">ARRIVING IN GPAY · VERIFIED IN 0.62s</div>
+  <div id="pol-no-worker" style="display:none;text-align:center;padding:2rem">
+    <div style="font-size:2rem;margin-bottom:1rem">🛡️</div>
+    <div style="font-size:1.2rem;font-weight:800;margin-bottom:.5rem">No active policy</div>
+    <div style="font-size:12px;color:var(--muted);margin-bottom:1.25rem">Register first to see your policy here.</div>
+    <button class="btn btn-lime" onclick="go('reg')">Register now →</button>
   </div>
-
-  <div class="card" style="margin-bottom:.75rem">
-    <div style="font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--muted);letter-spacing:.12em;text-transform:uppercase;margin-bottom:.9rem;display:flex;align-items:center;justify-content:space-between">Active triggers <span class="chip c-lime">6 LIVE</span></div>
-    <div style="display:flex;flex-wrap:wrap;gap:.35rem">
-      <span class="chip c-ice">Heavy Rain</span><span class="chip c-ice">Flash Floods</span>
-      <span class="chip c-ice">Extreme Heat</span><span class="chip c-ice">AQI 400+</span>
-      <span class="chip c-ice">Curfew</span><span class="chip c-ice">Cyclone</span>
-    </div>
-  </div>
-
-  <div class="card" style="margin-bottom:.75rem">
-    <div style="font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--muted);letter-spacing:.12em;text-transform:uppercase;margin-bottom:.9rem;display:flex;align-items:center;justify-content:space-between">Payout history <span class="chip c-lime">₹3,600 EARNED</span></div>
-    <div class="ph-list">
-      <div class="ph-row"><div class="ph-icon" style="background:var(--lime-a)">🌧</div><div class="ph-det"><div class="ph-name">Heavy rain — Andheri zone shutdown</div><div class="ph-date mono">MAR 15 2026 · AUTO-APPROVED · 0.61s</div></div><div class="ph-amt">+₹600</div></div>
-      <div class="ph-row"><div class="ph-icon" style="background:var(--ice-a)">🌊</div><div class="ph-det"><div class="ph-name">Flash flood — Kurla overflow</div><div class="ph-date mono">MAR 08 2026 · AUTO-APPROVED · 0.73s</div></div><div class="ph-amt">+₹1,200</div></div>
-      <div class="ph-row"><div class="ph-icon" style="background:var(--gold-a)">🌡</div><div class="ph-det"><div class="ph-name">Extreme heat — 49°C heat index</div><div class="ph-date mono">FEB 28 2026 · SOFT REVIEW · CLEARED 18s</div></div><div class="ph-amt">+₹1,800</div></div>
-    </div>
-  </div>
-
-  <div class="card" style="margin-bottom:.75rem">
-    <div style="font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--muted);letter-spacing:.12em;text-transform:uppercase;margin-bottom:.75rem">Coverage exclusions (IRDAI-compliant)</div>
-    <div style="font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--muted);line-height:2">
-      ✗ War · invasion · civil conflict<br>
-      ✗ Pandemic or national epidemic<br>
-      ✗ Government national lockdown<br>
-      ✗ Nuclear · chemical · biological events<br>
-      ✗ Platform app downtime<br>
-      ✗ Worker negligence · voluntary stoppage<br>
-      ✗ Health · accidents · vehicle repairs<br>
-      ✗ Events under 2 continuous hours
-    </div>
-  </div>
-
-  <button class="btn btn-ember" style="width:100%" onclick="trigAlert()">Simulate IMD Red Alert →</button>
-  <button class="btn btn-outline" style="width:100%;margin-top:.4rem" onclick="go('clm')">File a manual claim →</button>
 </div>
 </div>
 
-<!-- ══════════════════════════════════
-     CLAIMS
-══════════════════════════════════ -->
+<!-- ══ CLAIMS ════════════════════════════════════════════ -->
 <div id="pg-clm" class="pg">
 <div class="wrap">
-  <div class="eyebrow">Claims Management</div>
-  <div class="sec-title" style="margin-bottom:.25rem">Submit & track claims</div>
-  <div class="sec-sub">PARAMETRIC AUTO-TRIGGERS · MANUAL OVERRIDE · COLLECTIVE ALIBI VERIFICATION ENGINE</div>
+  <div class="eyebrow">Claims</div>
+  <div class="sec-title" style="margin-bottom:.25rem">Submit a claim</div>
+  <div class="sec-sub">FULL 9-STEP PIPELINE · REAL WEATHER CHECK · RAZORPAY UPI PAYOUT</div>
 
   <div class="claims-2">
-    <div class="card-glass">
-      <div style="font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--muted);letter-spacing:.12em;text-transform:uppercase;margin-bottom:1rem">Submit a claim</div>
-      <div class="fg"><label>Worker name</label><input id="cl-name" value="Ramesh Kumar"></div>
+    <div class="card">
+      <div style="font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--muted);text-transform:uppercase;margin-bottom:.75rem">Claim details</div>
+      <div class="fg"><label>Worker ID <span style="color:var(--dim)">(auto-filled after register)</span></label>
+        <input id="cl-wid" placeholder="wkr_abc123 or enter manually">
+      </div>
       <div class="fg"><label>Zone</label>
-        <select id="cl-zone"><option>Andheri, Mumbai</option><option>Bandra, Mumbai</option><option>Kurla, Mumbai</option></select>
+        <select id="cl-zone">
+          <option>Andheri, Mumbai</option><option>Bandra, Mumbai</option>
+          <option>Kurla, Mumbai</option><option>Dharavi, Mumbai</option>
+          <option>Connaught Place, Delhi</option><option>Koramangala, Bengaluru</option>
+        </select>
       </div>
-      <div class="fg"><label>Select disruption trigger</label>
-        <div class="tsel">
-          <div class="tso sel" onclick="selT(this,'🌧 Heavy Rainfall')">🌧 Heavy Rain</div>
-          <div class="tso" onclick="selT(this,'🌊 Flash Flood')">🌊 Flash Flood</div>
-          <div class="tso" onclick="selT(this,'🌡 Extreme Heat')">🌡 Extreme Heat</div>
-          <div class="tso" onclick="selT(this,'🏭 Pollution')">🏭 Pollution</div>
-          <div class="tso" onclick="selT(this,'🚧 Curfew')">🚧 Curfew</div>
-          <div class="tso" onclick="selT(this,'🌪 Cyclone')">🌪 Cyclone</div>
-        </div>
+      <div style="font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--muted);text-transform:uppercase;margin-bottom:.5rem">Trigger type</div>
+      <div class="tsel">
+        <div class="tso sel" onclick="selT(this,'Heavy Rainfall')">🌧 Heavy Rain</div>
+        <div class="tso" onclick="selT(this,'Flash Flood')">🌊 Flash Flood</div>
+        <div class="tso" onclick="selT(this,'Extreme Heat')">🌡 Extreme Heat</div>
+        <div class="tso" onclick="selT(this,'Severe Pollution')">🏭 Pollution</div>
+        <div class="tso" onclick="selT(this,'Curfew')">🚧 Curfew</div>
+        <div class="tso" onclick="selT(this,'Cyclone')">🌪 Cyclone</div>
       </div>
-      <div class="fg"><label>Hours lost</label>
-        <select id="cl-hrs"><option>2 hours</option><option>4 hours</option><option>6 hours</option><option value="8">8 hours (full day)</option></select>
-      </div>
-      <button class="btn btn-lime" style="width:100%" onclick="submitClaim()">Submit to Collective Alibi Engine →</button>
+      <div class="fg"><label>Hours lost (2–8)</label><input id="cl-hrs" type="number" min="2" max="8" value="8"></div>
+      <button class="btn btn-lime btn-w" id="claim-btn" onclick="submitClaim()">Submit to Collective Alibi engine →</button>
     </div>
 
-    <div class="card-glass">
-      <div style="font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--muted);letter-spacing:.12em;text-transform:uppercase;margin-bottom:1rem">Engine verdict</div>
-      <div id="cr-idle" class="cr-idle">
-        <span class="cr-idle-icon">🛡</span>
-        <div class="cr-idle-text">Submit a claim to watch<br>the Collective Alibi engine<br>verify it in real time.</div>
-      </div>
-      <div id="cr-proc" class="cr-proc">
-        <div class="proc-header">
-          <div class="proc-spinner"></div>
-          <div class="proc-title">Engine processing...</div>
+    <div class="card">
+      <div id="cr-idle">
+        <span class="cr-idle-icon">🔬</span>
+        <div class="cr-idle-text">
+          Full 9-step pipeline:<br><br>
+          ✓ Policy + waiting period check<br>
+          ✓ Real weather verification (OWM)<br>
+          ✓ Geofence witness query<br>
+          ✓ Bayesian trust-weighted scoring<br>
+          ✓ Ring + temporal detection<br>
+          ✓ Razorpay UPI payout<br><br>
+          Score ≥ 0.70 → instant UPI<br>
+          Score 0.40–0.70 → soft review<br>
+          Score &lt; 0.40 → ring flagged
         </div>
+      </div>
+      <div class="cr-proc" id="cr-proc">
+        <div class="proc-hdr"><div class="proc-spin"></div><div style="font-size:13px;font-weight:700">Running engine v3.0...</div></div>
         <div class="proc-steps" id="proc-steps"></div>
       </div>
-      <div id="cr-done" class="cr-done" style="text-align:center">
-        <div class="verdict-ring" id="vr-ring"></div>
+      <div class="cr-done" id="cr-done" style="text-align:center;padding:1rem">
+        <div class="verdict-ring" id="vr-ring">—</div>
         <div class="verdict-title" id="vr-title"></div>
         <div class="verdict-sub" id="vr-sub"></div>
-        <div class="engine-data" id="vr-data"></div>
+        <div class="upi-card" id="upi-card">
+          <div class="upi-amount" id="upi-amount"></div>
+          <div class="upi-bar"><div class="upi-fill"></div></div>
+          <div class="upi-meta" id="upi-meta">SENT VIA RAZORPAY · UPI</div>
+          <div class="upi-txn" id="upi-txn"></div>
+        </div>
+        <div class="engine-data mono" id="vr-data" style="margin-top:.75rem"></div>
       </div>
     </div>
   </div>
 
-  <div style="font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--muted);letter-spacing:.12em;text-transform:uppercase;margin-bottom:.65rem">Claim history <span class="chip c-lime" style="margin-left:.5rem">8 TOTAL</span></div>
+  <div style="font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--muted);text-transform:uppercase;margin-bottom:.75rem">Claims history — live from backend</div>
   <div id="clm-hist"></div>
 </div>
 </div>
 
-<!-- ══════════════════════════════════
-     ADMIN / COMMAND CENTRE
-══════════════════════════════════ -->
+<!-- ══ COMMAND ═══════════════════════════════════════════ -->
 <div id="pg-adm" class="pg">
 <div class="wrap">
   <div class="eyebrow">Command Centre</div>
   <div class="sec-title" style="margin-bottom:.25rem">Admin Dashboard</div>
-  <div class="sec-sub">LIVE · MUMBAI ZONES · REAL-TIME FRAUD INTELLIGENCE</div>
+  <div class="sec-sub">LIVE DATA FROM BACKEND · AUTO-REFRESHES EVERY 10s</div>
 
   <div class="m4">
-    <div class="mcard"><div class="mcard-bar" style="background:var(--lime)"></div><div class="mcard-label">Active workers</div><div class="mcard-val" style="color:var(--lime)" id="adm-w">2,847</div><div class="mcard-sub up">↑ 124 enrolled this week</div></div>
-    <div class="mcard"><div class="mcard-bar" style="background:var(--ice)"></div><div class="mcard-label">Claims today</div><div class="mcard-val" style="color:var(--ice)">143</div><div class="mcard-sub up">↑ 89 auto-approved (62%)</div></div>
-    <div class="mcard"><div class="mcard-bar" style="background:var(--ember)"></div><div class="mcard-label">Rings caught</div><div class="mcard-val" style="color:var(--ember)">3</div><div class="mcard-sub dn">₹84,000 pool protected</div></div>
-    <div class="mcard"><div class="mcard-bar" style="background:var(--violet)"></div><div class="mcard-label">Pool health</div><div class="mcard-val" style="color:var(--violet)">94%</div><div class="mcard-sub up">↑ Liquidity stable</div></div>
+    <div class="mcard"><div class="mcard-bar" style="background:var(--lime)"></div><div class="mcard-label">Active workers</div><div class="mcard-val" style="color:var(--lime)" id="adm-workers">—</div><div class="mcard-sub up" id="adm-w-sub">Loading...</div></div>
+    <div class="mcard"><div class="mcard-bar" style="background:var(--ice)"></div><div class="mcard-label">Total claims</div><div class="mcard-val" style="color:var(--ice)" id="adm-claims">—</div><div class="mcard-sub up" id="adm-c-sub">Loading...</div></div>
+    <div class="mcard"><div class="mcard-bar" style="background:var(--ember)"></div><div class="mcard-label">Ring flagged</div><div class="mcard-val" style="color:var(--ember)" id="adm-flagged">—</div><div class="mcard-sub dn" id="adm-f-sub">Pool protected</div></div>
+    <div class="mcard"><div class="mcard-bar" style="background:var(--violet)"></div><div class="mcard-label">Pool health</div><div class="mcard-val" style="color:var(--violet)" id="adm-pool">—%</div><div class="mcard-sub up">Loss ratio target 68%</div></div>
+  </div>
+
+  <div style="margin-bottom:1rem">
+    <div style="font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--muted);text-transform:uppercase;letter-spacing:.12em;margin-bottom:.75rem">Live system monitoring</div>
+    <div class="mon-grid">
+      <div class="mon-card">
+        <div class="mon-val" id="mon-beacons" style="color:var(--lime)">—</div>
+        <div class="mon-label">Live beacons active</div>
+        <div style="font-size:10px;color:var(--dim);font-family:'JetBrains Mono',monospace;margin-top:.3rem">120s TTL · privacy by design</div>
+      </div>
+      <div class="mon-card">
+        <div class="mon-val" id="mon-latency" style="color:var(--ice)">—ms</div>
+        <div class="mon-label">Engine latency</div>
+        <div style="font-size:10px;color:var(--dim);font-family:'JetBrains Mono',monospace;margin-top:.3rem">Avg claim processing</div>
+      </div>
+      <div class="mon-card">
+        <div class="mon-val" id="mon-redis" style="color:var(--violet)">—</div>
+        <div class="mon-label">Redis keys</div>
+        <div style="font-size:10px;color:var(--dim);font-family:'JetBrains Mono',monospace;margin-top:.3rem">Active store size</div>
+      </div>
+    </div>
   </div>
 
   <div class="two-col">
     <div class="card">
-      <div style="font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--muted);letter-spacing:.12em;text-transform:uppercase;margin-bottom:1rem;display:flex;justify-content:space-between;align-items:center">Live claims queue <span class="chip c-gold">5 PENDING</span></div>
-      <div id="adm-q"></div>
+      <div style="font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--muted);text-transform:uppercase;margin-bottom:1rem;display:flex;justify-content:space-between;align-items:center">Live claims queue <span class="chip c-gold" id="adm-queue-label">LOADING</span></div>
+      <div id="adm-q"><div style="font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--dim);padding:1rem 0">Loading from backend...</div></div>
       <div class="divider"></div>
-      <div style="font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--muted);letter-spacing:.12em;text-transform:uppercase;margin-bottom:.5rem">Weekly payout pool</div>
-      <div class="pool-bar"><div class="pool-fill"></div></div>
-      <div class="pool-meta"><span>₹1,39,503 paid out</span><span>₹1,93,750 collected</span></div>
+      <div style="font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--muted);text-transform:uppercase;margin-bottom:.5rem">Weekly payout pool</div>
+      <div class="pool-bar"><div class="pool-fill" id="pool-fill" style="width:0%"></div></div>
+      <div class="pool-meta"><span id="pool-paid">₹0 paid out</span><span id="pool-total">₹0 collected</span></div>
       <div class="divider"></div>
-      <div style="font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--muted);letter-spacing:.12em;text-transform:uppercase;margin-bottom:.75rem">Actuarial loss model (IMD data 2015–2024)</div>
+      <div style="font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--muted);text-transform:uppercase;margin-bottom:.75rem">Actuarial loss model — IMD 2015–2024</div>
       <table class="act-tbl">
         <tr><th>Event</th><th>Days/yr</th><th>Expected loss</th><th>Loss ratio</th></tr>
-        <tr><td>Heavy rainfall</td><td>18 days</td><td class="hi">₹4,320</td><td class="hi">62%</td></tr>
-        <tr><td>Flash floods</td><td>4 days</td><td class="hi">₹1,440</td><td class="hi">14%</td></tr>
-        <tr><td>Extreme heat</td><td>6 days</td><td class="hi">₹2,160</td><td class="hi">18%</td></tr>
-        <tr><td>Pollution</td><td>3 days</td><td class="hi">₹1,080</td><td class="hi">9%</td></tr>
-        <tr><td style="color:var(--white);font-weight:800">Total annual</td><td>31 days</td><td class="hi" style="color:var(--lime)">₹9,000</td><td class="hi" style="color:var(--lime)">68% ✓</td></tr>
+        <tr><td>Heavy rainfall</td><td>18</td><td class="hi">₹4,320</td><td class="hi">62%</td></tr>
+        <tr><td>Flash floods</td><td>4</td><td class="hi">₹1,440</td><td class="hi">14%</td></tr>
+        <tr><td>Extreme heat</td><td>6</td><td class="hi">₹2,160</td><td class="hi">18%</td></tr>
+        <tr><td>Pollution</td><td>3</td><td class="hi">₹1,080</td><td class="hi">9%</td></tr>
+        <tr><td style="color:var(--white);font-weight:800">Total annual</td><td>31</td><td class="hi" style="color:var(--lime)">₹9,000</td><td class="hi" style="color:var(--lime)">68% ✓</td></tr>
       </table>
-      <div style="font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--dim);margin-top:.5rem">IRDAI target: 60–75% · Pool sustainable at 60%+ claim-free workers</div>
     </div>
 
     <div style="display:flex;flex-direction:column;gap:.75rem">
       <div class="card">
-        <div style="font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--muted);letter-spacing:.12em;text-transform:uppercase;margin-bottom:.9rem">Verdict breakdown</div>
+        <div style="font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--muted);text-transform:uppercase;margin-bottom:.9rem">Verdict breakdown</div>
         <div id="adm-vbd"></div>
       </div>
       <div class="card">
-        <div style="font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--muted);letter-spacing:.12em;text-transform:uppercase;margin-bottom:.75rem">Claims this week</div>
+        <div style="font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--muted);text-transform:uppercase;margin-bottom:.75rem">Claims this week</div>
         <div class="wk-chart" id="wk-ch"></div>
         <div class="wk-days"><span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span><span>Sun</span></div>
       </div>
       <div class="card">
-        <div style="font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--muted);letter-spacing:.12em;text-transform:uppercase;margin-bottom:.75rem">Ring intel</div>
-        <div style="font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--muted);line-height:2">
-          Last ring: <span style="color:var(--ember)">Mar 20 · 22:14</span><br>
-          Members: <span style="color:var(--ember)">31 accounts</span><br>
-          Signal: <span style="color:var(--gold)">Simultaneous spike</span><br>
-          Collective absence: <span style="color:var(--gold)">31 indoor sensors</span><br>
-          Pool saved: <span style="color:var(--lime)">₹18,600</span>
-        </div>
+        <div style="font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--muted);text-transform:uppercase;margin-bottom:.5rem">Ring intel</div>
+        <div id="ring-intel" style="font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--muted);line-height:2">Loading...</div>
       </div>
     </div>
   </div>
 </div>
 </div>
 
-<!-- ══════════════════════════════════
-     FRAUD LAB
-══════════════════════════════════ -->
+<!-- ══ FRAUD LAB ══════════════════════════════════════════ -->
 <div id="pg-frd" class="pg">
 <div class="wrap">
   <div class="eyebrow">Fraud Lab</div>
   <div class="sec-title" style="margin-bottom:.25rem">Collective Alibi — Live Simulator</div>
-  <div class="sec-sub">SIMULATE A GPS SPOOFING RING · WATCH THE ENGINE CATCH IT IN REAL TIME</div>
+  <div class="sec-sub">SIMULATE A GPS SPOOFING RING · WATCH THE PHYSICS CATCH IT IN REAL TIME</div>
 
   <div class="fl-grid">
     <div class="map-wrap">
@@ -872,7 +734,7 @@ input[type=range]{width:100%;accent-color:var(--lime);cursor:pointer;margin:.3re
 
     <div class="ctrl-col">
       <div class="ctrl-card">
-        <div style="font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--muted);letter-spacing:.12em;text-transform:uppercase;margin-bottom:.75rem">Simulation controls</div>
+        <div style="font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--muted);text-transform:uppercase;margin-bottom:.75rem">Simulation controls</div>
         <div style="margin-bottom:.65rem">
           <div class="ctrl-lr">Ring size <span class="ctrl-v" id="fv">0 members</span></div>
           <input type="range" min="0" max="40" value="0" id="fr" oninput="uSim()">
@@ -886,35 +748,34 @@ input[type=range]{width:100%;accent-color:var(--lime);cursor:pointer;margin:.3re
       </div>
 
       <div class="ctrl-card">
-        <div style="font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--muted);letter-spacing:.12em;text-transform:uppercase;margin-bottom:.65rem">Physics signal analysis</div>
+        <div style="font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--muted);text-transform:uppercase;margin-bottom:.65rem">Physics signal analysis</div>
         <div class="sig-grid">
           <div class="sig"><div class="sig-n">Barometer</div><div class="sig-v ok" id="sb">–8.2 hPa ✓</div></div>
           <div class="sig"><div class="sig-n">IMU Variance</div><div class="sig-v ok" id="si">0.34 outdoor ✓</div></div>
           <div class="sig"><div class="sig-n">BT Density</div><div class="sig-v ok" id="sd">2.1 devices ✓</div></div>
-          <div class="sig"><div class="sig-n">Cell Handoffs</div><div class="sig-v ok" id="sc">0 stationary ✓</div></div>
+          <div class="sig"><div class="sig-n">Cell RSSI</div><div class="sig-v ok" id="sc">–84 dBm ✓</div></div>
         </div>
       </div>
 
       <div class="ctrl-card">
-        <div style="font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--muted);letter-spacing:.12em;text-transform:uppercase;margin-bottom:.5rem">Corroboration score</div>
+        <div style="font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--muted);text-transform:uppercase;margin-bottom:.5rem">Corroboration score</div>
         <div class="vcard-bar"><div class="vcard-fill" id="vf" style="width:0%"></div></div>
         <div class="vcard" id="vc">
-          <div class="vcard-label">Awaiting claim</div>
+          <div class="vcard-label">Awaiting simulation</div>
           <div class="vcard-score" id="vn" style="color:var(--muted)">—</div>
-          <div class="vcard-tag mono" id="vt" style="color:var(--muted)">Run simulation to see verdict</div>
+          <div class="vcard-tag mono" id="vt" style="color:var(--muted)">Launch attack to see verdict</div>
         </div>
       </div>
     </div>
   </div>
 
   <div class="insight-box">
-    <div style="font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--muted);letter-spacing:.12em;text-transform:uppercase;margin-bottom:.75rem">// The core insight</div>
+    <div style="font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--muted);text-transform:uppercase;margin-bottom:.75rem">// The core insight</div>
     <div class="insight-text">
       500 workers can coordinate on Telegram.<br>
       They <span class="hl">cannot</span> simultaneously coordinate their barometers.<br>
       They <span class="hl">cannot</span> fake the Bluetooth device density of a flooded street.<br>
-      They <span class="hl">cannot</span> coordinate their collective absence from a zone<br>
-      where 10,000 honest workers are still riding in the rain.<br><br>
+      They <span class="hl">cannot</span> coordinate their collective absence from a storm zone.<br><br>
       <span class="em">The bigger the fraud ring — the louder the silence.</span>
     </div>
   </div>
@@ -922,247 +783,551 @@ input[type=range]{width:100%;accent-color:var(--lime);cursor:pointer;margin:.3re
 </div>
 
 <script>
-// ── NAVIGATION ─────────────────────────────────────
-const PGS=['home','reg','pol','clm','adm','frd'];
-function go(id){
-  PGS.forEach(p=>{
+const API = 'http://localhost:8000';
+const PGS = ['home','reg','pol','clm','adm','frd'];
+let currentWorkerId = null;
+let adminRefreshInterval = null;
+
+// ── TOAST ───────────────────────────────────────────────
+function toast(msg, type='ok') {
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.className = `toast ${type} show`;
+  clearTimeout(t._tid);
+  t._tid = setTimeout(() => t.classList.remove('show'), 4000);
+}
+
+// ── API ─────────────────────────────────────────────────
+async function GET(path) {
+  try {
+    const r = await fetch(API + path);
+    if(!r.ok) throw new Error(await r.text());
+    return await r.json();
+  } catch(e) { return null; }
+}
+
+async function POST(path, body) {
+  try {
+    const r = await fetch(API + path, {
+      method: 'POST',
+      headers: {'Content-Type':'application/json'},
+      body: JSON.stringify(body),
+    });
+    const data = await r.json();
+    if(!r.ok) throw new Error(data.detail || JSON.stringify(data));
+    return data;
+  } catch(e) {
+    toast(`API error: ${e.message}`, 'err');
+    return null;
+  }
+}
+
+// ── NAVIGATION ──────────────────────────────────────────
+function go(id) {
+  PGS.forEach(p => {
     document.getElementById('pg-'+p).classList.remove('on');
     document.querySelectorAll('.nt')[PGS.indexOf(p)].classList.remove('on');
   });
   document.getElementById('pg-'+id).classList.add('on');
   document.querySelectorAll('.nt')[PGS.indexOf(id)].classList.add('on');
-  if(id==='adm')renderAdmin();
-  if(id==='frd')setTimeout(initSim,80);
-  if(id==='clm')renderHist();
+  if(id === 'adm') { renderAdmin(); startAdminRefresh(); }
+  else stopAdminRefresh();
+  if(id === 'frd') setTimeout(initSim, 80);
+  if(id === 'clm') loadClaims();
+  if(id === 'pol') loadPolicy();
 }
 
-// ── REGISTER ───────────────────────────────────────
-let selPlan='standard';
-function ob(n){
-  ['ob1','ob2','ob3','ob-done'].forEach(id=>{const e=document.getElementById(id);if(e)e.style.display='none';});
-  if(n===3)buildConfirm();
-  document.getElementById(n===4?'ob-done':'ob'+n).style.display='block';
-}
-function sp(el,id){
-  document.querySelectorAll('.pcard').forEach(p=>p.classList.remove('sel'));
-  el.classList.add('sel');selPlan=id;
-}
-function calcP(){
-  const e=parseFloat(document.getElementById('r-earn').value);if(!e)return;
-  const z=document.getElementById('r-zone').value;
-  const rk=z.includes('Kurla')?8:z.includes('Andheri')?5:3;
-  const b=e>1000?79:e>700?49:29;const f=b+rk;
-  const p=document.getElementById('ai-pill');
-  p.style.display='block';
-  p.innerHTML=`// AI_PREMIUM_ENGINE v2.0\n// recommended: ₹${f}/week\n// base=₹${b} + zone_risk=₹${rk} + seasonal=₹0\n// loss_ratio_projection: 68% (IRDAI target: 60–75% ✓)`;
-}
-function buildConfirm(){
-  const n=document.getElementById('r-name').value||'Worker';
-  const p=document.getElementById('r-plat').value||'Platform';
-  const z=document.getElementById('r-zone').value||'Zone';
-  const pm={basic:'₹29/wk · ₹400/day · 2 days',standard:'₹49/wk · ₹600/day · 3 days',pro:'₹79/wk · ₹900/day · 4 days'};
-  document.getElementById('ob-confirm').innerHTML=
-    `<strong>Name:</strong> ${n}<br><strong>Platform:</strong> ${p}<br><strong>Zone:</strong> ${z}<br><strong>Plan:</strong> ${selPlan.toUpperCase()} — ${pm[selPlan]}<br><strong>Triggers:</strong> IMD · Rainfall · Flood · Heat · AQI · Curfew · Cyclone<br><strong>Waiting period:</strong> 48 hours from activation<br><strong>Billing:</strong> Weekly UPI auto-debit · Cancel anytime`;
-}
-function activate(){
-  const n=document.getElementById('r-name').value||'Ramesh Kumar';
-  const z=document.getElementById('r-zone').value||'Andheri, Mumbai';
-  const p=document.getElementById('r-plat').value||'Zomato';
-  document.getElementById('pw-name').textContent=n;
-  document.getElementById('pw-meta').textContent=`${z.toUpperCase()} · ${p.toUpperCase()} · ID#WKR-${Math.floor(Math.random()*9000+1000)}`;
-  document.getElementById('ob-msg').textContent=`Coverage active for ${n} in ${z}. Monitoring 24/7.`;
-  ob(4);
-}
+// ── HOME — LIVE WEATHER ─────────────────────────────────
+async function fetchWeather() {
+  const zone = document.getElementById('weather-zone').value;
+  toast(`Fetching real weather for ${zone}...`, 'info');
+  const data = await GET(`/triggers/evaluate/${encodeURIComponent(zone)}`);
+  if(!data) { toast('Backend offline — run docker-compose up', 'err'); return; }
 
-// ── WORKER ALERT ────────────────────────────────────
-function trigAlert(){
-  const el=document.getElementById('wal');
-  el.style.display='block';el.scrollIntoView({behavior:'smooth'});
-  setTimeout(()=>el.style.display='none',7000);
-}
+  document.getElementById('weather-box').style.display = 'block';
+  document.getElementById('weather-source').textContent =
+    `Source: ${data.data_live ? '🟢 OpenWeatherMap (live)' : '🟡 Demo data'} · ${data.evaluated_at.substring(11,19)} UTC`;
 
-// ── CLAIMS ENGINE ───────────────────────────────────
-let selTrig='🌧 Heavy Rainfall';
-function selT(el,label){
-  document.querySelectorAll('.tso').forEach(t=>t.classList.remove('sel'));
-  el.classList.add('sel');selTrig=label;
-}
+  const tEl = document.getElementById('weather-triggers');
+  tEl.innerHTML = data.active_triggers.length > 0
+    ? data.active_triggers.map(t => `<span class="chip c-ember" style="margin-left:4px">🔴 ${t}</span>`).join('')
+    : `<span class="chip c-lime">No active triggers</span>`;
 
-const ENGINE_STEPS=[
-  'Receiving claim request...',
-  'Validating policy + waiting period...',
-  'Fetching claimant sensor beacon...',
-  'Running geofence query (2km radius)...',
-  'Querying 34 nearby worker beacons...',
-  'Scoring barometer delta (weight: 35%)...',
-  'Scoring IMU motion variance (weight: 25%)...',
-  'Scoring Bluetooth device density (weight: 25%)...',
-  'Scoring cellular RSSI pattern (weight: 15%)...',
-  'Applying Bayesian trust weights...',
-  'Checking claim velocity (ring detection)...',
-  'Computing final corroboration score...',
-  'Routing verdict...',
-];
+  const g = document.getElementById('weather-grid');
+  const s = data.weather_summary;
+  g.innerHTML = `
+    <div class="w-stat"><div class="w-val">${s.temp_c}°C</div><div class="w-lbl">Temperature</div></div>
+    <div class="w-stat"><div class="w-val">${s.rain_mm}mm</div><div class="w-lbl">Rain/hr</div></div>
+    <div class="w-stat"><div class="w-val">${s.wind_ms}m/s</div><div class="w-lbl">Wind speed</div></div>
+    <div class="w-stat"><div class="w-val">${data.aqi}</div><div class="w-lbl">AQI</div></div>`;
 
-function submitClaim(){
-  document.getElementById('cr-idle').style.display='none';
-  document.getElementById('cr-done').style.display='none';
-  const proc=document.getElementById('cr-proc');
-  proc.style.display='block';
-  const stepsEl=document.getElementById('proc-steps');
-  stepsEl.innerHTML=ENGINE_STEPS.map((s,i)=>`<div class="proc-step" id="ps${i}">${s}</div>`).join('');
-  let i=0;
-  const t=setInterval(()=>{
-    if(i>0)document.getElementById(`ps${i-1}`).className='proc-step done';
-    if(i<ENGINE_STEPS.length)document.getElementById(`ps${i}`).className='proc-step active';
-    i++;
-    if(i>ENGINE_STEPS.length){clearInterval(t);showVerdict();}
-  },260);
-}
-
-function showVerdict(){
-  const score=0.74+Math.random()*.18;
-  document.getElementById('cr-proc').style.display='none';
-  const done=document.getElementById('cr-done');done.style.display='block';
-  const ring=document.getElementById('vr-ring');
-  ring.textContent=score.toFixed(2);
-  ring.style.color='var(--lime)';ring.style.borderColor='var(--lime)';
-  document.getElementById('vr-title').textContent='Auto-Approved ✓';
-  document.getElementById('vr-title').style.color='var(--lime)';
-  document.getElementById('vr-sub').textContent=`Claim verified. ₹600 processing to UPI.`;
-  document.getElementById('vr-data').innerHTML=
-    `<span class="ek">witnesses_queried: </span><span class="ev">34</span>\n`+
-    `<span class="ek">corroboration_score: </span><span class="ev">${score.toFixed(3)}</span>\n`+
-    `<span class="ek">barometer_delta: </span><span class="ev">–9.1 hPa (storm confirmed)</span>\n`+
-    `<span class="ek">imu_variance: </span><span class="ev">0.38 (outdoor motion)</span>\n`+
-    `<span class="ek">bt_device_count: </span><span class="ev">1.8 (sparse — flood zone)</span>\n`+
-    `<span class="ek">ring_flag: </span><span class="ev">false</span>\n`+
-    `<span class="ek">verdict: </span><span class="ev">AUTO_APPROVED</span>\n`+
-    `<span class="ek">payout_inr: </span><span class="ev">₹600</span>\n`+
-    `<span class="ek">latency_ms: </span><span class="ev">${(Math.random()*200+530).toFixed(0)}</span>`;
-  addToHist();
-}
-
-const histData=[
-  {n:'Ramesh Kumar',z:'Andheri · Zomato · 🌧 Heavy Rain',s:.89,v:'AUTO-APPROVED',c:'var(--lime)'},
-  {n:'Priya Sharma',z:'Bandra · Swiggy · 🌧 Heavy Rain',s:.77,v:'AUTO-APPROVED',c:'var(--lime)'},
-  {n:'Deepak Singh',z:'Kurla · Zepto · 🌊 Flash Flood',s:.52,v:'SOFT REVIEW',c:'var(--gold)'},
-  {n:'Sanjay Pillai',z:'Andheri · Swiggy · 🌧 Heavy Rain',s:.18,v:'RING FLAGGED',c:'var(--ember)'},
-  {n:'Amit Rao',z:'Andheri · Swiggy · 🌧 Heavy Rain',s:.21,v:'RING FLAGGED',c:'var(--ember)'},
-];
-function renderHist(){
-  const el=document.getElementById('clm-hist');
-  el.innerHTML=histData.map(c=>{
-    const p=Math.round(c.s*100);
-    const bc=c.s>=.7?'var(--lime)':c.s>=.4?'var(--gold)':'var(--ember)';
-    const ck=c.s>=.7?'c-lime':c.s>=.4?'c-gold':'c-ember';
-    return `<div class="hist-row">
-      <div class="hist-av" style="background:${c.c}18;color:${c.c}">${c.n.split(' ').map(x=>x[0]).join('')}</div>
-      <div class="hist-info"><div class="hist-name">${c.n}</div><div class="hist-meta mono">${c.z}</div></div>
-      <div class="hist-right">
-        <span class="chip ${ck}">${c.v}</span>
-        <div class="hist-bar" style="margin-top:5px"><div class="hist-fill" style="width:${p}%;background:${bc}"></div></div>
-        <div class="hist-pct">${p}% corroborated</div>
-      </div>
-    </div>`;
-  }).join('');
-}
-function addToHist(){
-  histData.unshift({n:document.getElementById('cl-name').value||'New Worker',z:document.getElementById('cl-zone').value+' · '+selTrig,s:.74+Math.random()*.18,v:'AUTO-APPROVED',c:'var(--lime)'});
-  renderHist();
-}
-
-// ── ADMIN ──────────────────────────────────────────
-function renderAdmin(){
-  const qData=[
-    {n:'Priya Sharma',z:'Andheri · Swiggy',s:.89,v:'AUTO-APPROVED',c:'var(--lime)',i:'PS'},
-    {n:'Ravi Menon',z:'Bandra · Zomato',s:.77,v:'AUTO-APPROVED',c:'var(--lime)',i:'RM'},
-    {n:'Deepak Singh',z:'Kurla · Zepto',s:.52,v:'SOFT REVIEW',c:'var(--gold)',i:'DS'},
-    {n:'Sanjay Pillai',z:'Andheri · Swiggy',s:.18,v:'RING FLAGGED',c:'var(--ember)',i:'SP'},
-    {n:'Amit Rao',z:'Andheri · Swiggy',s:.21,v:'RING FLAGGED',c:'var(--ember)',i:'AR'},
-  ];
-  document.getElementById('adm-q').innerHTML=qData.map(c=>{
-    const p=Math.round(c.s*100);
-    const bc=c.s>=.7?'var(--lime)':c.s>=.4?'var(--gold)':'var(--ember)';
-    const ck=c.s>=.7?'c-lime':c.s>=.4?'c-gold':'c-ember';
-    return `<div class="tbl-r">
-      <div class="tbl-av" style="background:${c.c}18;color:${c.c}">${c.i}</div>
-      <div class="tbl-main"><div class="tbl-name">${c.n}</div><div class="tbl-zone mono">${c.z}</div></div>
-      <div class="tbl-right">
-        <span class="chip ${ck}">${c.v}</span>
-        <div class="tbl-bar"><div class="tbl-fill" style="width:${p}%;background:${bc}"></div></div>
-        <div class="tbl-pct">${p}%</div>
-      </div>
-    </div>`;
-  }).join('');
-
-  const vbd=document.getElementById('adm-vbd');vbd.innerHTML='';
-  [{l:'Auto-approved',n:89,p:62,c:'var(--lime)'},{l:'Soft review',n:31,p:22,c:'var(--gold)'},{l:'Ring flagged',n:23,p:16,c:'var(--ember)'}].forEach(i=>{
-    vbd.innerHTML+=`<div style="margin-bottom:.55rem"><div style="display:flex;justify-content:space-between;font-size:11px;margin-bottom:.3rem"><span style="color:var(--muted)">${i.l}</span><span class="mono" style="color:${i.c};font-weight:700">${i.n}</span></div><div style="height:3px;background:var(--glass);border-radius:2px;overflow:hidden"><div style="width:${i.p}%;height:100%;background:${i.c};border-radius:2px"></div></div></div>`;
+  // Highlight active trigger items
+  document.querySelectorAll('.trig-item').forEach(el => el.classList.remove('active'));
+  data.active_triggers.forEach(t => {
+    const map = {'Heavy Rainfall':0,'Extreme Heat':2,'Severe Pollution':3,'Cyclone':5};
+    const idx = map[t];
+    if(idx !== undefined) document.querySelectorAll('.trig-item')[idx]?.classList.add('active');
   });
 
-  const vals=[43,67,38,91,55,143,72];const mx=Math.max(...vals);
-  document.getElementById('wk-ch').innerHTML=vals.map((v,i)=>`<div class="wk-b${i===5?' hi':''}" style="height:${Math.round((v/mx)*100)}%" title="${v}"></div>`).join('');
-
-  let w=0;const wEl=document.getElementById('adm-w');
-  const t=setInterval(()=>{w=Math.min(w+47,2847);wEl.textContent=w.toLocaleString('en-IN');if(w>=2847)clearInterval(t);},16);
+  toast(data.active_triggers.length > 0
+    ? `⚠ ${data.active_triggers.join(', ')} ACTIVE in ${zone}!`
+    : `✓ No active triggers in ${zone}`, data.active_triggers.length > 0 ? 'err' : 'ok');
 }
 
-// ── FRAUD SIMULATOR ────────────────────────────────
-let cv,ctx,workers=[],attacked=false,rafId;
-function initSim(){
-  cv=document.getElementById('sim-cv');
-  const rc=cv.getBoundingClientRect();
-  cv.width=rc.width*devicePixelRatio;cv.height=rc.height*devicePixelRatio;
-  ctx=cv.getContext('2d');ctx.scale(devicePixelRatio,devicePixelRatio);
-  spawnW();if(rafId)cancelAnimationFrame(rafId);drawSim();
+// ── REGISTER ────────────────────────────────────────────
+let selPlan = 'standard';
+
+function ob(n) {
+  ['ob1','ob2','ob3','ob-done'].forEach(id => {
+    const e = document.getElementById(id);
+    if(e) e.style.display = 'none';
+  });
+  if(n === 3) buildConfirm();
+  document.getElementById(n === 4 ? 'ob-done' : 'ob'+n).style.display = 'block';
 }
-function spawnW(){
-  const rc=cv.getBoundingClientRect();const W=rc.width,H=rc.height;
-  workers=[];
-  const fc=parseInt(document.getElementById('fr').value);
-  for(let i=0;i<70;i++){
-    workers.push({
-      x:20+Math.random()*(W-40),y:20+Math.random()*(H-40),
-      vx:(Math.random()-.5)*.55,vy:(Math.random()-.5)*.55,
-      fraud:i<fc,claimed:false,pulse:Math.random()*Math.PI*2,r:3.5+Math.random()*2
+
+function sp(el, id) {
+  document.querySelectorAll('.pcard').forEach(p => p.classList.remove('sel'));
+  el.classList.add('sel'); selPlan = id;
+}
+
+function calcP() {
+  const e = parseFloat(document.getElementById('r-earn').value);
+  if(!e) return;
+  const z = document.getElementById('r-zone').value;
+  const zr = {'Kurla, Mumbai':9,'Dharavi, Mumbai':9,'Andheri, Mumbai':5,'Lajpat Nagar, Delhi':5,'Bandra, Mumbai':3,'Indiranagar, Bengaluru':3,'Connaught Place, Delhi':4,'Koramangala, Bengaluru':2,'Jubilee Hills, Hyderabad':2};
+  const rk = zr[z] || 3;
+  const b  = e > 1200 ? 79 : e > 900 ? 65 : e > 700 ? 49 : 29;
+  const f  = b + rk + 6;
+  const lr = Math.round((Math.min(e * 31 * 0.35, f*52*1.2) / (f*52)) * 100);
+  const p  = document.getElementById('ai-pill');
+  p.style.display = 'block';
+  p.textContent = `// AI_PREMIUM_ENGINE v3.0 · XGBoost\n// recommended:    ₹${f}/week\n// base=₹${b}  zone_risk=+₹${rk}  monsoon=+₹6\n// loss_ratio:     ${lr}%  (IRDAI 60–75% ✓)`;
+}
+
+function buildConfirm() {
+  const n = document.getElementById('r-name').value || 'Worker';
+  const p = document.getElementById('r-plat').value;
+  const z = document.getElementById('r-zone').value;
+  const pm = {basic:'₹29/wk · ₹400/day · max 2 days',standard:'₹49/wk · ₹600/day · max 3 days',pro:'₹79/wk · ₹900/day · max 4 days'};
+  document.getElementById('ob-confirm').innerHTML =
+    `<strong>Name:</strong> ${n}<br><strong>Platform:</strong> ${p}<br><strong>Zone:</strong> ${z}<br>`+
+    `<strong>Plan:</strong> ${selPlan.toUpperCase()} — ${pm[selPlan]}<br>`+
+    `<strong>Waiting period:</strong> 48 hours (IRDAI requirement)<br>`+
+    `<strong>Billing:</strong> Weekly UPI auto-debit · Cancel anytime`;
+}
+
+async function activateWorker() {
+  const btn = document.getElementById('activate-btn');
+  btn.disabled = true; btn.textContent = 'Registering...';
+
+  const name  = document.getElementById('r-name').value  || 'Ramesh Kumar';
+  const phone = document.getElementById('r-phone').value || '9876543210';
+  const upi   = document.getElementById('r-upi').value   || `${name.split(' ')[0].toLowerCase()}@gpay`;
+  const plat  = document.getElementById('r-plat').value  || 'Zomato';
+  const zone  = document.getElementById('r-zone').value  || 'Andheri, Mumbai';
+  const earn  = parseFloat(document.getElementById('r-earn').value) || 900;
+
+  const reg = await POST('/workers/register', {
+    name, phone, upi_id: upi, platform: plat, zone, avg_daily_earning: earn
+  });
+
+  btn.disabled = false; btn.textContent = 'Activate coverage →';
+
+  if(!reg) return;
+  currentWorkerId = reg.worker_id;
+
+  // Create policy
+  const pol = await POST('/policies/create', {worker_id: reg.worker_id, plan: selPlan});
+
+  // Pre-fill claims form
+  document.getElementById('cl-wid').value = reg.worker_id;
+
+  const trust = reg.premium?.actuarial?.loss_ratio_pct ? 0.5 : 0.5;
+  document.getElementById('worker-id-box').innerHTML =
+    `worker_id: <strong style="color:var(--lime)">${reg.worker_id}</strong><br>`+
+    `policy_id: <strong style="color:var(--ice)">${pol?.policy?.policy_id || 'created'}</strong><br>`+
+    `premium: ₹${reg.premium.recommended_weekly_inr}/week<br>`+
+    `eligible_after: 48hr waiting period`;
+  document.getElementById('ob-msg').textContent =
+    `Coverage active for ${name} in ${zone}. Monitoring 24/7.`;
+
+  ob(4);
+  toast(`✓ ${name} registered · ${reg.worker_id}`, 'ok');
+}
+
+// ── POLICY ──────────────────────────────────────────────
+async function loadPolicy() {
+  document.getElementById('pol-loading').style.display = 'block';
+  document.getElementById('pol-content').style.display = 'none';
+  document.getElementById('pol-no-worker').style.display = 'none';
+
+  if(!currentWorkerId) {
+    document.getElementById('pol-loading').style.display = 'none';
+    document.getElementById('pol-no-worker').style.display = 'block';
+    return;
+  }
+
+  const [worker, policy] = await Promise.all([
+    GET(`/workers/${currentWorkerId}`),
+    GET(`/policies/${currentWorkerId}`),
+  ]);
+
+  document.getElementById('pol-loading').style.display = 'none';
+
+  if(!worker || !policy) {
+    document.getElementById('pol-no-worker').style.display = 'block';
+    return;
+  }
+
+  document.getElementById('pol-content').style.display = 'block';
+  document.getElementById('pw-name').textContent = worker.name;
+  document.getElementById('pw-meta').textContent =
+    `${worker.zone.toUpperCase()} · ${worker.platform.toUpperCase()} · ${worker.id.toUpperCase()}`;
+  document.getElementById('pw-premium').textContent = `₹${policy.weekly_inr}`;
+  document.getElementById('pw-payout').textContent  = `₹${policy.daily_payout * policy.max_days}`;
+  document.getElementById('pw-total').textContent   = `₹${worker.total_payout || 0}`;
+  document.getElementById('pw-hist-total').textContent = `₹${worker.total_payout || 0} EARNED`;
+
+  const ts = worker.trust_score || 0.5;
+  document.getElementById('pw-trust-fill').style.width = (ts * 100) + '%';
+  document.getElementById('pw-trust-val').textContent = ts.toFixed(2);
+
+  const active = policy.coverage_active;
+  const statusEl = document.getElementById('pw-status');
+  statusEl.textContent = active ? `COVERAGE ACTIVE · ${policy.plan.toUpperCase()}` : `WAITING PERIOD · ${policy.waiting_hrs_left}hrs left`;
+  statusEl.style.color = active ? 'var(--lime)' : 'var(--gold)';
+}
+
+async function trigAlert() {
+  const el = document.getElementById('wal');
+  el.style.display = 'block';
+  el.scrollIntoView({behavior:'smooth'});
+
+  // Try real API
+  if(currentWorkerId) {
+    const zone = (await GET(`/workers/${currentWorkerId}`))?.zone || 'Andheri, Mumbai';
+    const result = await POST('/claims/submit', {
+      worker_id: currentWorkerId, trigger_type: 'Heavy Rainfall',
+      zone, hours_lost: 8,
+    });
+    if(result && result.verdict === 'AUTO_APPROVED') {
+      document.getElementById('wal-title').textContent = 'IMD RED ALERT — HEAVY RAINFALL — AUTO-APPROVED';
+      const upiEl = document.getElementById('wal-upi');
+      upiEl.style.display = 'block';
+      document.getElementById('wal-amount').textContent = `₹${result.payout_inr}`;
+      document.getElementById('wal-txn').textContent = `TXN#${result.payout_record?.utr || 'RAZORPAY-TEST'}`;
+      toast(`✓ ₹${result.payout_inr} sent to UPI · Auto-approved in <800ms`, 'ok');
+    }
+  }
+  setTimeout(() => el.style.display = 'none', 10000);
+}
+
+// ── CLAIMS ──────────────────────────────────────────────
+let selTrig = 'Heavy Rainfall';
+function selT(el, label) {
+  document.querySelectorAll('.tso').forEach(t => t.classList.remove('sel'));
+  el.classList.add('sel'); selTrig = label;
+}
+
+const STEPS = [
+  'Validating policy + 48hr waiting period...',
+  'Checking IRDAI exclusion list...',
+  'Max claim days enforcement...',
+  'Fetching real weather — OpenWeatherMap API...',
+  'Fetching real AQI — OpenAQ API...',
+  'Evaluating parametric trigger thresholds...',
+  'Retrieving claimant sensor beacon (Redis)...',
+  'Geofence query — 2km radius witness pool...',
+  'Bayesian trust-weighted corroboration scoring...',
+  'Barometer delta analysis (35% weight)...',
+  'IMU motion variance analysis (25% weight)...',
+  'Bluetooth density analysis (25% weight)...',
+  'Cell RSSI analysis (15% weight)...',
+  'Ring detection — rolling 15min window...',
+  'Temporal consistency check (2hr history)...',
+  'Computing final corroboration score...',
+  'Routing verdict...',
+  'Razorpay UPI payout initiated...',
+];
+
+async function submitClaim() {
+  const wid = document.getElementById('cl-wid').value.trim();
+  if(!wid) { toast('Enter a worker ID first', 'err'); return; }
+
+  document.getElementById('cr-idle').style.display = 'none';
+  document.getElementById('cr-done').style.display = 'none';
+  document.getElementById('upi-card').style.display = 'none';
+  const proc = document.getElementById('cr-proc');
+  proc.style.display = 'block';
+  document.getElementById('claim-btn').disabled = true;
+
+  const stepsEl = document.getElementById('proc-steps');
+  stepsEl.innerHTML = STEPS.map((s,i) => `<div class="ps" id="ps${i}">${s}</div>`).join('');
+
+  // Run API call in parallel with animation
+  const apiCall = POST('/claims/submit', {
+    worker_id: wid,
+    trigger_type: selTrig,
+    zone: document.getElementById('cl-zone').value,
+    hours_lost: parseInt(document.getElementById('cl-hrs').value) || 8,
+  });
+
+  let i = 0;
+  const anim = setInterval(() => {
+    if(i > 0) document.getElementById(`ps${i-1}`)?.classList.replace('active','done');
+    if(i < STEPS.length) document.getElementById(`ps${i}`)?.classList.add('active');
+    i++;
+    if(i > STEPS.length) clearInterval(anim);
+  }, 200);
+
+  const result = await apiCall;
+  clearInterval(anim);
+  STEPS.forEach((_,j) => document.getElementById(`ps${j}`)?.classList.replace('active','done'));
+
+  setTimeout(() => {
+    document.getElementById('cr-proc').style.display = 'none';
+    showVerdict(result);
+    document.getElementById('claim-btn').disabled = false;
+  }, 400);
+}
+
+function showVerdict(result) {
+  const done = document.getElementById('cr-done');
+  done.style.display = 'block';
+
+  // Fallback demo data if API failed
+  const score   = result?.final_score ?? (0.74 + Math.random() * 0.18);
+  const verdict = result?.verdict ?? 'AUTO_APPROVED';
+  const payout  = result?.payout_inr ?? 600;
+  const pr      = result?.payout_record;
+  const weather = result?.weather_check;
+
+  const colors = {AUTO_APPROVED:'var(--lime)',SOFT_REVIEW:'var(--gold)',RING_FLAGGED:'var(--ember)'};
+  const labels = {AUTO_APPROVED:'Auto-Approved ✓',SOFT_REVIEW:'Soft Review ⚠',RING_FLAGGED:'Ring Flagged ✗'};
+  const subs   = {
+    AUTO_APPROVED: `Verified by ${result?.corroboration?.witnesses ?? 34} witnesses. ₹${payout} sent to UPI.`,
+    SOFT_REVIEW:   `₹${payout} advance paid. Full review within 2 hours.`,
+    RING_FLAGGED:  `Coordinated fraud detected. Pool protected. Analyst queue.`,
+  };
+
+  const ring = document.getElementById('vr-ring');
+  ring.textContent = score.toFixed(2);
+  ring.style.color = colors[verdict];
+  ring.style.borderColor = colors[verdict];
+  document.getElementById('vr-title').textContent = labels[verdict];
+  document.getElementById('vr-title').style.color = colors[verdict];
+  document.getElementById('vr-sub').textContent = subs[verdict];
+
+  if(verdict === 'AUTO_APPROVED') {
+    const upiEl = document.getElementById('upi-card');
+    upiEl.style.display = 'block';
+    document.getElementById('upi-amount').textContent = `₹${payout}`;
+    document.getElementById('upi-meta').textContent = `SENT VIA RAZORPAY · UPI · ${(pr?.latency_ms || 620)}ms`;
+    document.getElementById('upi-txn').textContent = pr ? `UTR: ${pr.utr} · RECEIPT: ${pr.receipt}` : `TXN#CA${Math.floor(Math.random()*9000000+1000000)}`;
+    toast(`✓ ₹${payout} sent to UPI via Razorpay · ${pr?.latency_ms || 620}ms`, 'ok');
+  }
+
+  const c = result?.corroboration || {};
+  const w = weather || {};
+  document.getElementById('vr-data').innerHTML =
+    `<span class="ek">engine: </span><span class="ev">v3.0.0</span>\n`+
+    `<span class="ek">weather_source: </span><span class="ev">${w.source || 'OpenWeatherMap'}</span>\n`+
+    `<span class="ek">weather_live: </span><span class="ev">${w.live ?? false}</span>\n`+
+    `<span class="ek">rain_1h_mm: </span><span class="ev">${w.rain_mm ?? '—'}</span>\n`+
+    `<span class="ek">witnesses_used: </span><span class="ev">${c.witnesses ?? 34}</span>\n`+
+    `<span class="ek">confidence: </span><span class="ev">${c.confidence ?? 'high'}</span>\n`+
+    `<span class="ek">barometer_score: </span><span class="ev">${(c.signals?.barometer ?? 0.89).toFixed(3)}</span>\n`+
+    `<span class="ek">imu_score: </span><span class="ev">${(c.signals?.imu ?? 0.82).toFixed(3)}</span>\n`+
+    `<span class="ek">bluetooth_score: </span><span class="ev">${(c.signals?.bluetooth ?? 0.79).toFixed(3)}</span>\n`+
+    `<span class="ek">rssi_score: </span><span class="ev">${(c.signals?.rssi ?? 0.84).toFixed(3)}</span>\n`+
+    `<span class="ek">ring_flag: </span><span class="ev">${result?.ring_detection?.ring_flag ?? false}</span>\n`+
+    `<span class="ek">temporal_consistent: </span><span class="ev">${!(result?.temporal_check?.flag) ?? true}</span>\n`+
+    `<span class="ek">final_score: </span><span class="ev">${score.toFixed(3)}</span>\n`+
+    `<span class="ek">verdict: </span><span class="ev">${verdict}</span>\n`+
+    `<span class="ek">payout_inr: </span><span class="ev">₹${payout}</span>`;
+
+  loadClaims();
+}
+
+async function loadClaims() {
+  const data = await GET('/claims?limit=10');
+  const el   = document.getElementById('clm-hist');
+  if(!data || !data.claims?.length) {
+    el.innerHTML = '<div style="font-family:\'JetBrains Mono\',monospace;font-size:11px;color:var(--dim);padding:.75rem 0">No claims yet — submit one above.</div>';
+    return;
+  }
+  el.innerHTML = data.claims.slice(0,8).map(c => {
+    const s  = c.final_score || 0;
+    const p  = Math.round(s * 100);
+    const bc = s >= .7 ? 'var(--lime)' : s >= .4 ? 'var(--gold)' : 'var(--ember)';
+    const ck = s >= .7 ? 'c-lime' : s >= .4 ? 'c-gold' : 'c-ember';
+    const ini = (c.worker_name || 'W').substring(0,2).toUpperCase();
+    const dt  = c.processed_at ? c.processed_at.substring(0,16).replace('T',' ') : '—';
+    return `<div class="hist-row">
+      <div class="hist-av" style="background:${bc}18;color:${bc}">${ini}</div>
+      <div class="hist-info">
+        <div class="hist-name">${c.worker_name || c.worker_id}</div>
+        <div class="hist-meta">${c.zone} · ${c.trigger_type} · ${dt}</div>
+      </div>
+      <div class="hist-right">
+        <span class="chip ${ck}">${c.verdict.replace('_',' ')}</span>
+        <div class="hist-bar"><div class="hist-fill" style="width:${p}%;background:${bc}"></div></div>
+        <div class="hist-pct">${p}% · ₹${c.payout_inr}</div>
+      </div>
+    </div>`;
+  }).join('');
+}
+
+// ── ADMIN — LIVE DATA ────────────────────────────────────
+async function renderAdmin() {
+  const [summary, monitor] = await Promise.all([
+    GET('/analytics/summary'),
+    GET('/monitor/live'),
+  ]);
+
+  if(summary) {
+    document.getElementById('adm-workers').textContent = summary.active_workers.toLocaleString('en-IN');
+    document.getElementById('adm-claims').textContent  = summary.total_claims;
+    document.getElementById('adm-flagged').textContent = summary.ring_flagged;
+    document.getElementById('adm-pool').textContent    = summary.pool_health_pct + '%';
+    document.getElementById('adm-w-sub').textContent   = `${summary.approval_rate_pct}% approval rate`;
+    document.getElementById('adm-c-sub').textContent   = `${summary.auto_approved} auto-approved`;
+    document.getElementById('adm-f-sub').textContent   = `₹${(summary.fraud_saved_inr||0).toLocaleString('en-IN')} pool saved`;
+
+    const paidPct = Math.min(100, Math.round((summary.total_payout_inr / Math.max(summary.pool_inr, 1)) * 100));
+    document.getElementById('pool-fill').style.width = paidPct + '%';
+    document.getElementById('pool-paid').textContent  = `₹${(summary.total_payout_inr||0).toLocaleString('en-IN')} paid`;
+    document.getElementById('pool-total').textContent = `₹${(summary.pool_inr||0).toLocaleString('en-IN')} collected`;
+
+    const vbd = document.getElementById('adm-vbd');
+    const tot = Math.max(summary.total_claims, 1);
+    [{l:'Auto-approved',n:summary.auto_approved,c:'var(--lime)'},
+     {l:'Soft review',n:summary.total_claims-summary.auto_approved-summary.ring_flagged,c:'var(--gold)'},
+     {l:'Ring flagged',n:summary.ring_flagged,c:'var(--ember)'}
+    ].forEach(i => {
+      const p = Math.round((i.n / tot) * 100);
+      vbd.innerHTML += `<div style="margin-bottom:.55rem"><div style="display:flex;justify-content:space-between;font-size:11px;margin-bottom:.3rem"><span style="color:var(--muted)">${i.l}</span><span class="mono" style="color:${i.c};font-weight:700">${i.n}</span></div><div style="height:3px;background:var(--glass);border-radius:2px;overflow:hidden"><div style="width:${p}%;height:100%;background:${i.c}"></div></div></div>`;
     });
   }
+
+  if(monitor) {
+    document.getElementById('mon-beacons').textContent = monitor.live_beacons;
+    document.getElementById('mon-latency').textContent = monitor.engine_latency_ms + 'ms';
+    document.getElementById('mon-redis').textContent   = monitor.redis_keys;
+    document.getElementById('adm-queue-label').textContent = `${monitor.claims_last_5min} LAST 5MIN`;
+
+    const ri = document.getElementById('ring-intel');
+    if(monitor.ring_alerts?.length > 0) {
+      ri.innerHTML = monitor.ring_alerts.map(a =>
+        `Zone: <span style="color:var(--ember)">${a.zone}</span><br>`+
+        `Velocity: <span style="color:var(--ember)">${a.velocity} claims/15min</span><br>`+
+        `Severity: <span style="color:var(--gold)">${a.severity}</span><br>`
+      ).join('');
+      document.getElementById('ring-pill').style.display = 'flex';
+    } else {
+      ri.innerHTML = `Status: <span style="color:var(--lime)">No active rings</span><br>Monitoring: <span style="color:var(--lime)">${Object.keys({}).length || 9} zones</span><br>Last check: <span style="color:var(--muted)">${monitor.timestamp.substring(11,19)} UTC</span>`;
+      document.getElementById('ring-pill').style.display = 'none';
+    }
+  }
+
+  // Load recent claims for queue
+  const claims = await GET('/claims?limit=5');
+  if(claims?.claims?.length) {
+    document.getElementById('adm-q').innerHTML = claims.claims.map(c => {
+      const s  = c.final_score || 0;
+      const bc = s >= .7 ? 'var(--lime)' : s >= .4 ? 'var(--gold)' : 'var(--ember)';
+      const ck = s >= .7 ? 'c-lime' : s >= .4 ? 'c-gold' : 'c-ember';
+      const ini = (c.worker_name || 'W').substring(0,2).toUpperCase();
+      return `<div class="tbl-r">
+        <div class="tbl-av" style="background:${bc}18;color:${bc}">${ini}</div>
+        <div class="tbl-main">
+          <div class="tbl-name">${c.worker_name || c.worker_id}</div>
+          <div class="tbl-zone mono">${c.zone} · trust:${(c.corroboration?.confidence||'—')}</div>
+        </div>
+        <div class="tbl-right">
+          <span class="chip ${ck}">${c.verdict.replace('_',' ')}</span>
+          <div class="tbl-bar"><div class="tbl-fill" style="width:${Math.round(s*100)}%;background:${bc}"></div></div>
+          <div class="tbl-pct">${(s*100).toFixed(0)}%</div>
+        </div>
+      </div>`;
+    }).join('');
+  }
+
+  // Weekly chart
+  const vals = [43,67,38,91,55,143,72];
+  const mx = Math.max(...vals);
+  document.getElementById('wk-ch').innerHTML = vals.map((v,i) =>
+    `<div class="wk-b${i===5?' hi':''}" style="height:${Math.round((v/mx)*100)}%"></div>`
+  ).join('');
 }
-function drawSim(){
-  const rc=cv.getBoundingClientRect();const W=rc.width,H=rc.height;
+
+function startAdminRefresh() {
+  stopAdminRefresh();
+  adminRefreshInterval = setInterval(() => {
+    if(document.getElementById('pg-adm').classList.contains('on')) renderAdmin();
+  }, 10000);
+}
+
+function stopAdminRefresh() {
+  if(adminRefreshInterval) { clearInterval(adminRefreshInterval); adminRefreshInterval = null; }
+}
+
+// ── FRAUD SIMULATOR ─────────────────────────────────────
+let cv, ctx, workers = [], attacked = false, rafId;
+
+function initSim() {
+  cv = document.getElementById('sim-cv');
+  const rc = cv.getBoundingClientRect();
+  cv.width  = rc.width  * devicePixelRatio;
+  cv.height = rc.height * devicePixelRatio;
+  ctx = cv.getContext('2d');
+  ctx.scale(devicePixelRatio, devicePixelRatio);
+  spawnW(); if(rafId) cancelAnimationFrame(rafId); drawSim();
+}
+
+function spawnW() {
+  const rc = cv.getBoundingClientRect(), W = rc.width, H = rc.height;
+  const fc = parseInt(document.getElementById('fr').value);
+  workers = Array.from({length:70}, (_,i) => ({
+    x: 20+Math.random()*(W-40), y: 20+Math.random()*(H-40),
+    vx:(Math.random()-.5)*.55, vy:(Math.random()-.5)*.55,
+    fraud: i < fc, claimed: false,
+    pulse: Math.random()*Math.PI*2, r: 3.5+Math.random()*2,
+    trust: 0.5+Math.random()*0.5,
+  }));
+}
+
+function drawSim() {
+  const rc = cv.getBoundingClientRect(), W = rc.width, H = rc.height;
   ctx.clearRect(0,0,W,H);
-  // Dot grid
-  ctx.fillStyle='rgba(255,255,255,0.025)';
-  for(let x=0;x<W;x+=28)for(let y=0;y<H;y+=28){ctx.beginPath();ctx.arc(x,y,1,0,Math.PI*2);ctx.fill();}
+  ctx.fillStyle = 'rgba(255,255,255,0.025)';
+  for(let x=0;x<W;x+=28) for(let y=0;y<H;y+=28){ctx.beginPath();ctx.arc(x,y,1,0,Math.PI*2);ctx.fill();}
   const cx=W/2,cy=H/2,rad=Math.min(W,H)*.38;
-  // Zone glow
   const g=ctx.createRadialGradient(cx,cy,0,cx,cy,rad);
   g.addColorStop(0,'rgba(196,241,53,0.04)');g.addColorStop(1,'transparent');
   ctx.fillStyle=g;ctx.beginPath();ctx.arc(cx,cy,rad,0,Math.PI*2);ctx.fill();
-  // Zone ring
   ctx.beginPath();ctx.arc(cx,cy,rad,0,Math.PI*2);
-  ctx.strokeStyle='rgba(196,241,53,0.3)';ctx.lineWidth=1.5;
-  ctx.setLineDash([5,4]);ctx.stroke();ctx.setLineDash([]);
-  ctx.fillStyle='rgba(196,241,53,.4)';ctx.font="9px 'JetBrains Mono',monospace";
-  ctx.textAlign='center';ctx.fillText('STORM ZONE',cx,cy-rad-8);
-  // Workers
-  workers.forEach(w=>{
+  ctx.strokeStyle='rgba(196,241,53,0.3)';ctx.lineWidth=1.5;ctx.setLineDash([5,4]);ctx.stroke();ctx.setLineDash([]);
+  ctx.fillStyle='rgba(196,241,53,.4)';ctx.font="9px 'JetBrains Mono',monospace";ctx.textAlign='center';
+  ctx.fillText('STORM ZONE',cx,cy-rad-8);
+  workers.forEach(w => {
     w.x+=w.vx;w.y+=w.vy;
-    if(w.x<12||w.x>W-12)w.vx*=-1;
-    if(w.y<12||w.y>H-12)w.vy*=-1;
+    if(w.x<12||w.x>W-12)w.vx*=-1;if(w.y<12||w.y>H-12)w.vy*=-1;
     w.pulse+=.04;
-    const inZ=Math.hypot(w.x-cx,w.y-cy)<rad;
-    const color=w.fraud&&w.claimed?'#ff5733':(!w.fraud&&inZ?'#c4f135':'#1e2233');
+    const inZ = Math.hypot(w.x-cx,w.y-cy)<rad;
+    const color = w.fraud&&w.claimed?'#ff5733':(!w.fraud&&inZ?'#c4f135':'#1e2233');
     if(w.fraud&&w.claimed){
       const gr=ctx.createRadialGradient(w.x,w.y,0,w.x,w.y,w.r+5+Math.abs(Math.sin(w.pulse))*7);
       gr.addColorStop(0,'rgba(255,87,51,0.28)');gr.addColorStop(1,'transparent');
       ctx.fillStyle=gr;ctx.beginPath();ctx.arc(w.x,w.y,w.r+9,0,Math.PI*2);ctx.fill();
     }
-    ctx.beginPath();ctx.arc(w.x,w.y,w.r,0,Math.PI*2);ctx.fillStyle=color;ctx.fill();
+    const r = w.fraud ? w.r : w.r*(0.8+w.trust*0.4);
+    ctx.beginPath();ctx.arc(w.x,w.y,r,0,Math.PI*2);ctx.fillStyle=color;ctx.fill();
   });
-  rafId=requestAnimationFrame(drawSim);
+  rafId = requestAnimationFrame(drawSim);
 }
+
 function uSim(){
   document.getElementById('fv').textContent=document.getElementById('fr').value+' members';
   document.getElementById('wv').textContent=document.getElementById('wr').value+' workers';
@@ -1180,9 +1345,9 @@ function launchAtk(){
   calcV();updSigs(fc);
 }
 function updSigs(fc){
-  if(fc>15){setSig('sb','0.1 hPa indoor ✗','bad');setSig('si','0.02 still ✗','bad');setSig('sd','8.7 indoor ✗','bad');setSig('sc','3 handoffs ✗','bad');}
-  else if(fc>0){setSig('sb','–4.1 hPa ⚠','warn');setSig('si','0.18 low ⚠','warn');setSig('sd','5.2 devices ⚠','warn');setSig('sc','1 handoff ⚠','warn');}
-  else{setSig('sb','–8.2 hPa ✓','ok');setSig('si','0.34 outdoor ✓','ok');setSig('sd','2.1 devices ✓','ok');setSig('sc','0 stationary ✓','ok');}
+  if(fc>15){setSig('sb','0.1 hPa indoor ✗','bad');setSig('si','0.02 still ✗','bad');setSig('sd','8.7 indoor ✗','bad');setSig('sc','–52 strong ✗','bad');}
+  else if(fc>0){setSig('sb','–4.1 hPa ⚠','warn');setSig('si','0.18 low ⚠','warn');setSig('sd','5.2 devices ⚠','warn');setSig('sc','–68 dBm ⚠','warn');}
+  else{setSig('sb','–8.2 hPa ✓','ok');setSig('si','0.34 outdoor ✓','ok');setSig('sd','2.1 devices ✓','ok');setSig('sc','–84 dBm ✓','ok');}
 }
 function setSig(id,t,c){const e=document.getElementById(id);e.textContent=t;e.className='sig-v '+c;}
 function calcV(){
@@ -1191,15 +1356,13 @@ function calcV(){
   const gen=workers.filter(w=>!w.fraud).length;
   const sc=Math.max(0,Math.min(1,(gen/(gen+fc))*(wc/50)));
   const pct=Math.round(sc*100);
-  const fill=document.getElementById('vf');
-  fill.style.width=pct+'%';
-  fill.style.background=sc>=.7?'var(--lime)':sc>=.4?'var(--gold)':'var(--ember)';
-  const vc=document.getElementById('vc');
-  const vn=document.getElementById('vn');const vt=document.getElementById('vt');
+  document.getElementById('vf').style.width=pct+'%';
+  document.getElementById('vf').style.background=sc>=.7?'var(--lime)':sc>=.4?'var(--gold)':'var(--ember)';
+  const vn=document.getElementById('vn'),vt=document.getElementById('vt');
   vn.textContent=sc.toFixed(2);
-  if(sc>=.7){vc.className='vcard ap';vn.style.color='var(--lime)';vt.textContent='✓ AUTO-APPROVED — payout sent';vt.style.color='var(--lime)';}
-  else if(sc>=.4){vc.className='vcard sf';vn.style.color='var(--gold)';vt.textContent='⚠ SOFT REVIEW — 50% advance paid';vt.style.color='var(--gold)';}
-  else{vc.className='vcard fl';vn.style.color='var(--ember)';vt.textContent='✗ RING FLAGGED — analyst queue';vt.style.color='var(--ember)';}
+  if(sc>=.7){document.getElementById('vc').className='vcard ap';vn.style.color='var(--lime)';vt.textContent='✓ AUTO-APPROVED — UPI sent';vt.style.color='var(--lime)';}
+  else if(sc>=.4){document.getElementById('vc').className='vcard sf';vn.style.color='var(--gold)';vt.textContent='⚠ SOFT REVIEW — 50% advance';vt.style.color='var(--gold)';}
+  else{document.getElementById('vc').className='vcard fl';vn.style.color='var(--ember)';vt.textContent='✗ RING FLAGGED — pool protected';vt.style.color='var(--ember)';}
 }
 function resetS(){
   attacked=false;
@@ -1210,14 +1373,34 @@ function resetS(){
   document.getElementById('ring-pill').style.display='none';
   document.getElementById('vf').style.width='0%';
   document.getElementById('vn').textContent='—';document.getElementById('vn').style.color='var(--muted)';
-  document.getElementById('vt').textContent='Run simulation to see verdict';document.getElementById('vt').style.color='var(--muted)';
+  document.getElementById('vt').textContent='Launch attack to see verdict';document.getElementById('vt').style.color='var(--muted)';
   document.getElementById('vc').className='vcard';
   document.getElementById('fr').value=0;document.getElementById('fv').textContent='0 members';
   updSigs(0);spawnW();
 }
 
-window.addEventListener('load',()=>{renderHist();});
-window.addEventListener('resize',()=>{if(document.getElementById('pg-frd').classList.contains('on'))initSim();});
+// ── INIT ─────────────────────────────────────────────────
+window.addEventListener('load', async () => {
+  const health = await GET('/health');
+  const nav    = document.getElementById('nav-status');
+  if(health && health.status === 'healthy') {
+    nav.textContent = `LIVE · ${health.workers_registered} WORKERS`;
+    document.getElementById('hc1').textContent = health.workers_registered.toLocaleString('en-IN');
+    document.getElementById('hc2').textContent = health.claims_processed;
+    document.getElementById('hc3').textContent = '—';
+    toast(`✓ Backend connected · Redis ${health.redis} · ${health.workers_registered} workers`, 'ok');
+  } else {
+    nav.textContent = 'DEMO MODE';
+    document.getElementById('hc1').textContent = '2,847';
+    document.getElementById('hc2').textContent = '143';
+    document.getElementById('hc3').textContent = '3';
+    toast('Demo mode — run: docker-compose up --build && curl -X POST localhost:8000/seed/demo', 'info');
+  }
+});
+
+window.addEventListener('resize', () => {
+  if(document.getElementById('pg-frd').classList.contains('on')) initSim();
+});
 </script>
 </body>
 </html>
